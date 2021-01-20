@@ -304,4 +304,30 @@ template {
   display: none; }
 
 body {
-  background: red; }
+  background: white; }
+
+body {
+  font-family: 'Montserrat', sans-serif; }
+
+.section-inner {
+  width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
+
+.section-preheader {
+  color: #363636; }
+  .section-preheader-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .section-preheader-content__hour, .section-preheader-content__location, .section-preheader-content__tel {
+      font-size: 18px; }
+    .section-preheader-content__logo {
+      min-width: 140px; }
+
+.section-header {
+  color: #363636;
+  background-color: #f4f4f4; }
+  .section-header-wrapper__form {
+    display: flex; }

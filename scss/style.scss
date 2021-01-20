@@ -3,10 +3,111 @@
 @mixin font-montserrat {
     font-family: 'Montserrat', sans-serif;
 }
-@mixin font-Roboto {
+@mixin font-roboto {
 font-family: 'Roboto', sans-serif;    
 }
 body {
-    background: red;
+    background: white;
+    color: $color-black;
 }
 // === / Mixins ===
+
+// === Variables ===
+$color-white: #fff;
+$color-grey: #f4f4f4;
+$color-black: #363636;
+$color-red: #cc3333;
+$h1-size: 28px;
+$h2-size: 22px;
+$h3-size: 18px;
+$h4-size: 14px;
+// === / Variables ===
+
+// === Common ===
+body {
+    @include font-montserrat;
+}
+
+.section-outer {}
+.section-inner {
+    width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+// === / Common ===
+
+// === pre-header ===
+.section-preheader {
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__hour,
+        &__location,
+        &__tel {
+            font-size: $h3-size;
+        }
+
+        &__logo {
+            min-width: 140px;
+            margin-top: 36px;
+        }
+        
+        &__hour {}
+        &__location {}
+        &__tel {}
+    }
+}
+// === / pre-header ===
+
+// === header ===
+.section-header {
+    background-color: $color-grey;
+
+    &-content {}
+    &-wrapper {
+        
+        &__title {}
+        &__subtitle {}
+        &__form {
+            display: flex;
+
+            &-input {}
+            &-button {}
+        }
+
+    }
+
+}
+// === / header ===
+
+// === promo ===
+.section-promo {}
+// === / promo ===
+
+// === founder ===
+.section-founder {}
+// === / founder ===
+
+// === whywe ===
+.section-whywe {}
+// === / whywe ===
+
+// === callback ===
+.section-callback {}
+// === / callback ===
+
+// === adventages ===
+.section-adventages {}
+// === / adventages ===
+
+// === footer ===
+.section-footer {}
+// === / footer ===
+
+// === footercall ===
+.section-footercall {}
+// === / footercall ===
