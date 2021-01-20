@@ -4,12 +4,9 @@
     font-family: 'Montserrat', sans-serif;
 }
 @mixin font-roboto {
-font-family: 'Roboto', sans-serif;    
+font-family: 'Roboto', sans-serif;  
 }
-body {
-    background: white;
-    color: $color-black;
-}
+
 // === / Mixins ===
 
 // === Variables ===
@@ -17,6 +14,7 @@ $color-white: #fff;
 $color-grey: #f4f4f4;
 $color-black: #363636;
 $color-red: #cc3333;
+$color-holder: #b9b9b9;
 $h1-size: 28px;
 $h2-size: 22px;
 $h3-size: 18px;
@@ -25,8 +23,13 @@ $h4-size: 14px;
 
 // === Common ===
 body {
-    @include font-montserrat;
+    @include font-roboto;
+    background: white;
+    color: #363636;
 }
+h1, h2, h3, h4 {
+    @include font-montserrat;
+} 
 
 .section-outer {}
 .section-inner {
@@ -44,6 +47,15 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding-bottom: 10px;
+
+        &__logo {
+            padding-top: 10px;
+                img {
+                    min-width: 105px;
+                    height: 49px;
+                }
+        }
 
         &__hour,
         &__location,
@@ -51,14 +63,13 @@ body {
             font-size: $h3-size;
         }
 
-        &__logo {
-            min-width: 140px;
-            margin-top: 36px;
+        &__hour {
+            font-weight: bold;
         }
-        
-        &__hour {}
         &__location {}
-        &__tel {}
+        &__tel {
+            font-weight: bold;
+        }
     }
 }
 // === / pre-header ===
@@ -75,8 +86,30 @@ body {
         &__form {
             display: flex;
 
-            &-input {}
-            &-button {}
+            &-input {
+                input {
+                    border: 1px solid $color-black;
+                    background: rgba(255, 255, 255, .25);
+                    margin: 0;
+                    padding: 16px 20px;
+                    outline: none;
+                    border-radius: 4px;
+                    &::placeholder {
+                    color: $color-holder;
+                    }
+                }
+            }
+            &-button {
+                button {
+                    margin: 0;
+                    padding: 16px 20px;
+                    font-size: $h3-size;
+                    text-transform: uppercase;
+                    border: none;
+                    border-radius: 4px;
+                    background: linear-gradient(to right, #fe985b, #fe4fa7);
+                }
+            }
         }
 
     }
