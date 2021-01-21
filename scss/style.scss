@@ -213,17 +213,25 @@ h1, h2, h3, h4 {
 }
 // === / promo ===
 
+// === buying ===
+.section-buying {
+    &-content{
+        &__title {}
+    }
+    &-wrapper {
+
+        &-text {}
+        &-image {}
+    }
+}
+// === / buying ===
+
 // === founder ===
 .section-founder {
     &-content{
         &__title {}
-        &__subtitle {}
     }
     &-wrapper {
-        &-text {}
-        &-image {}
-    }
-    &-aside {
         &__brands {}
     }
     &-container {
