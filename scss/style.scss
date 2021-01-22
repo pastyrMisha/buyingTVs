@@ -217,7 +217,7 @@ h1, h2, h3, h4 {
 // === buying ===
 .section-buying {
     background: $color-grey;
-    padding: 80px 20px;
+    padding: 60px 20px;
     &-content{
         
         &__title {
@@ -278,11 +278,49 @@ h1, h2, h3, h4 {
 // === / founder ===
 
 // === whywe ===
-.section-whywe {}
+.section-whywe {
+    background: $color-grey;
+    padding: 60px 0px;
+    &-content {
+        &__title {
+            text-align: center;
+            font-size: $h2-size;
+        }
+    }
+    &-wrapper {
+        display: flex;
+        justify-content: space-around;
+        &__box {
+            &-icon {
+                text-align: center;
+            }
+            &-title, &-subtitle {
+                font-size: $h4-size;
+                text-align: center;
+                font-weight: 400;
+            }
+            &-title {
+
+            }
+            &-subtitle {}
+        }
+    }
+}
 // === / whywe ===
 
 // === callback ===
-.section-callback {}
+.section-callback {
+    &-content {
+        &__image {}
+    }
+    &-wrapper {
+        &__text {
+            &-tel {}
+        }
+        &__callback {}
+    }
+
+}
 // === / callback ===
 
 // === adventages ===

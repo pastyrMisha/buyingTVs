@@ -425,7 +425,7 @@ h1, h2, h3, h4 {
 
 .section-buying {
   background: #f4f4f4;
-  padding: 80px 20px; }
+  padding: 60px 20px; }
   .section-buying-content__title {
     text-align: center;
     font-size: 23px; }
@@ -456,3 +456,19 @@ h1, h2, h3, h4 {
     padding-top: 10px; }
     .section-founder-container__text h2 {
       font-size: 18px; }
+
+.section-whywe {
+  background: #f4f4f4;
+  padding: 60px 0px; }
+  .section-whywe-content__title {
+    text-align: center;
+    font-size: 23px; }
+  .section-whywe-wrapper {
+    display: flex;
+    justify-content: space-around; }
+    .section-whywe-wrapper__box-icon {
+      text-align: center; }
+    .section-whywe-wrapper__box-title, .section-whywe-wrapper__box-subtitle {
+      font-size: 14px;
+      text-align: center;
+      font-weight: 400; }
