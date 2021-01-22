@@ -16,7 +16,7 @@ $color-black: #363636;
 $color-red: #cc3333;
 $color-holder: #b9b9b9;
 $h1-size: 28px;
-$h2-size: 22px;
+$h2-size: 23px;
 $h3-size: 18px;
 $h4-size: 14px;
 // === / Variables ===
@@ -159,6 +159,7 @@ h1, h2, h3, h4 {
             text-align: center;
             margin-top: 45px;
             margin-bottom: 95px;
+            font-size: $h2-size;
         }
     }
     &-wrapper {
@@ -215,13 +216,25 @@ h1, h2, h3, h4 {
 
 // === buying ===
 .section-buying {
+    background: $color-grey;
+    padding: 80px 20px;
     &-content{
-        &__title {}
+        
+        &__title {
+            text-align: center;
+            font-size: $h2-size;
+        }
     }
     &-wrapper {
-
-        &-text {}
-        &-image {}
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        &__text {
+            text-align: right;
+        }
+        &__image {
+            
+        }
     }
 }
 // === / buying ===
@@ -229,15 +242,36 @@ h1, h2, h3, h4 {
 // === founder ===
 .section-founder {
     &-content{
-        &__title {}
+        padding: 40px 20px;
+        &__title {
+            text-align: center;
+            font-size: $h2-size;
+        }
     }
     &-wrapper {
-        &__brands {}
+        &__brands {
+            margin-bottom: 45px;
+            img {
+            max-width: 1140px;
+            }
+        }
     }
     &-container {
-        &__image {}
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        
+
+        &__image {
+            
+        }
         &__text {
-            h2 {}
+            
+            align-self: start;
+            padding-top: 10px;
+            h2 {
+                font-size: $h3-size;
+            }
         }
     }
 }

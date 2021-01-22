@@ -30,7 +30,7 @@ main {
    * `article` contexts in Chrome, Firefox, and Safari.
    */
 h1 {
-  font-size: 2em;
+  font-size: 28px;
   margin: 0.67em 0; }
 
 /* Grouping content
@@ -387,7 +387,8 @@ h1, h2, h3, h4 {
   .section-promo-content__title {
     text-align: center;
     margin-top: 45px;
-    margin-bottom: 95px; }
+    margin-bottom: 95px;
+    font-size: 23px; }
 
 .section-promo-wrapper {
   display: flex;
@@ -421,3 +422,37 @@ h1, h2, h3, h4 {
       margin-bottom: 20px; }
     .section-promo-container__box-title {
       text-align: center; }
+
+.section-buying {
+  background: #f4f4f4;
+  padding: 80px 20px; }
+  .section-buying-content__title {
+    text-align: center;
+    font-size: 23px; }
+  .section-buying-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; }
+    .section-buying-wrapper__text {
+      text-align: right; }
+
+.section-founder-content {
+  padding: 40px 20px; }
+  .section-founder-content__title {
+    text-align: center;
+    font-size: 23px; }
+
+.section-founder-wrapper__brands {
+  margin-bottom: 45px; }
+  .section-founder-wrapper__brands img {
+    max-width: 1140px; }
+
+.section-founder-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
+  .section-founder-container__text {
+    align-self: start;
+    padding-top: 10px; }
+    .section-founder-container__text h2 {
+      font-size: 18px; }
