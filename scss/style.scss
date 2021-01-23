@@ -20,6 +20,17 @@ $h1-size: 28px;
 $h2-size: 23px;
 $h3-size: 18px;
 $h4-size: 14px;
+
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+$screen-xs-max: 575px;
+$screen-sm-max: 767px;
+$screen-md-max: 991px;
+$screen-lg-max: 1199px;
+
 // === / Variables ===
 
 // === Common ===
@@ -32,9 +43,13 @@ h1, h2, h3, h4 {
     @include font-montserrat;
 } 
 
-.section-outer {}
+.section-outer {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
 .section-inner {
-    width: 1180px;
+    max-width: 1180px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -149,6 +164,16 @@ h1, h2, h3, h4 {
         }
 
     }
+
+    @media (max-width: $screen-lg-max) {
+        &-wrapper {
+            &__subtitle {
+                margin-right: 20px;
+                margin-left: 20px;
+            }
+        }
+    }
+        
 
 }
 // === / header ===
