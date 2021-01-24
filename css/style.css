@@ -346,6 +346,36 @@ img {
   .section-preheader-content__tel {
     font-weight: bold; }
 
+@media (max-width: 767px) {
+  .section-preheader {
+    padding: 10px; }
+    .section-preheader-content {
+      height: 90px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr; }
+      .section-preheader-content__logo {
+        flex-basis: 100%;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        grid-column: 1; }
+        .section-preheader-content__logo img {
+          height: 65px;
+          margin-right: 5px;
+          margin-left: 5px; }
+      .section-preheader-content__hour {
+        grid-row: 2;
+        grid-column: 2;
+        font-weight: 400;
+        font-size: 14px; }
+      .section-preheader-content__location {
+        grid-row: 1;
+        grid-column: 2;
+        font-size: 14px; }
+      .section-preheader-content__tel {
+        grid-row: 3;
+        grid-column: 2; } }
+
 .section-header {
   background: #f4f4f4; }
   .section-header-content__title {
@@ -393,7 +423,7 @@ img {
           border-radius: 4px;
           background: linear-gradient(to right, #fe985b, #fe4fa7);
           color: #fff; }
-  @media (max-width: 991px) {
+  @media (max-width: 767px) {
     .section-header-content__title {
       order: 1; }
     .section-header-wrapper {
@@ -458,7 +488,7 @@ img {
     .section-promo-container__box-title {
       text-align: center; }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   .section-promo-content {
     margin-bottom: 60px; }
     .section-promo-content__title {
@@ -473,6 +503,7 @@ img {
   .section-promo-container {
     flex-wrap: wrap; }
     .section-promo-container__box {
+      flex-basis: 50%;
       margin-top: 30px; } }
 
 .section-buying {
@@ -487,7 +518,7 @@ img {
     justify-content: space-around; }
     .section-buying-wrapper__text {
       text-align: right; }
-  @media (max-width: 991px) {
+  @media (max-width: 767px) {
     .section-buying {
       padding-top: 30px; }
       .section-buying-wrapper {
@@ -517,7 +548,7 @@ img {
     .section-founder-container__text h2 {
       font-size: 18px; }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   .section-founder-container {
     flex-wrap: wrap; } }
 
@@ -531,17 +562,19 @@ img {
   .section-whywe-wrapper {
     display: flex;
     justify-content: space-around; }
-    .section-whywe-wrapper__box-icon {
-      text-align: center;
-      margin-bottom: 30px; }
-      .section-whywe-wrapper__box-icon h4 {
-        font-weight: 700;
-        margin-bottom: 0; }
-    .section-whywe-wrapper__box-title, .section-whywe-wrapper__box-subtitle {
-      font-size: 14px;
-      text-align: center;
-      font-weight: 400; }
-  @media (max-width: 991px) {
+    .section-whywe-wrapper__box {
+      flex-basis: 100%; }
+      .section-whywe-wrapper__box-icon {
+        text-align: center;
+        margin-bottom: 30px; }
+        .section-whywe-wrapper__box-icon h4 {
+          font-weight: 700;
+          margin-bottom: 0; }
+      .section-whywe-wrapper__box-title, .section-whywe-wrapper__box-subtitle {
+        font-size: 14px;
+        text-align: center;
+        font-weight: 400; }
+  @media (max-width: 767px) {
     .section-whywe {
       padding: 30px 0px; }
       .section-whywe-wrapper {
@@ -577,7 +610,7 @@ img {
     background: linear-gradient(to right, #fe985b, #fe4fa7);
     color: #fff; }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   .section-callback-content {
     flex-wrap: wrap; } }
 
@@ -602,7 +635,7 @@ img {
       .section-adventages-content__desk-list li {
         display: flex;
         margin-bottom: 30px; }
-  @media (max-width: 991px) {
+  @media (max-width: 767px) {
     .section-adventages {
       margin: 60px 0px 30px; } }
 
@@ -628,7 +661,7 @@ img {
     background: linear-gradient(to right, #fe985b, #fe4fa7);
     color: #fff; }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   .section-footer-content {
     flex-wrap: wrap; } }
 
@@ -686,7 +719,7 @@ img {
           border-radius: 4px;
           background: linear-gradient(to right, #fe985b, #fe4fa7);
           color: #fff; }
-  @media (max-width: 991px) {
+  @media (max-width: 767px) {
     .section-footercall {
       padding-bottom: 30px;
       margin-top: 60px; }
