@@ -308,7 +308,10 @@ body {
   background: white;
   color: #363636; }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: 'Montserrat', sans-serif; }
 
 .section-outer {
@@ -369,7 +372,6 @@ h1, h2, h3, h4 {
           width: 358px;
           border: 1px solid #363636;
           background: rgba(255, 255, 255, 0.25);
-          margin: 0;
           padding: 10px 20px;
           outline: none;
           border-radius: 4px; }
@@ -389,7 +391,9 @@ h1, h2, h3, h4 {
   @media (max-width: 1199px) {
     .section-header-wrapper__subtitle {
       margin-right: 20px;
-      margin-left: 20px; } }
+      margin-left: 20px; }
+    .section-header-wrapper__form-input input {
+      max-width: 358px; } }
 
 .section-promo-content {
   margin-bottom: 95px; }
