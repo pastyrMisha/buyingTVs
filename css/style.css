@@ -346,7 +346,7 @@ img {
   .section-preheader-content__tel {
     font-weight: bold; }
 
-@media (max-width: 767px) {
+@media (max-width: 575px) {
   .section-preheader {
     padding: 10px; }
     .section-preheader-content {
@@ -423,7 +423,7 @@ img {
           border-radius: 4px;
           background: linear-gradient(to right, #fe985b, #fe4fa7);
           color: #fff; }
-  @media (max-width: 767px) {
+  @media (max-width: 575px) {
     .section-header-content__title {
       order: 1; }
     .section-header-wrapper {
@@ -442,9 +442,14 @@ img {
         margin-top: 60px; }
       .section-header-wrapper__form {
         order: 2;
-        margin-top: -10px; }
-        .section-header-wrapper__form-input input {
-          width: auto; } }
+        margin-top: -70px;
+        max-width: 80%;
+        width: 80%;
+        align-items: center; }
+        .section-header-wrapper__form-input {
+          width: 80%; }
+          .section-header-wrapper__form-input input {
+            width: 90%; } }
 
 .section-promo-content {
   margin-bottom: 95px;
@@ -488,7 +493,7 @@ img {
     .section-promo-container__box-title {
       text-align: center; }
 
-@media (max-width: 767px) {
+@media (max-width: 575px) {
   .section-promo-content {
     margin-bottom: 60px; }
     .section-promo-content__title {
@@ -518,7 +523,7 @@ img {
     justify-content: space-around; }
     .section-buying-wrapper__text {
       text-align: right; }
-  @media (max-width: 767px) {
+  @media (max-width: 575px) {
     .section-buying {
       padding-top: 30px; }
       .section-buying-wrapper {
@@ -548,7 +553,7 @@ img {
     .section-founder-container__text h2 {
       font-size: 18px; }
 
-@media (max-width: 767px) {
+@media (max-width: 575px) {
   .section-founder-container {
     flex-wrap: wrap; } }
 
@@ -574,7 +579,7 @@ img {
         font-size: 14px;
         text-align: center;
         font-weight: 400; }
-  @media (max-width: 767px) {
+  @media (max-width: 575px) {
     .section-whywe {
       padding: 30px 0px; }
       .section-whywe-wrapper {
@@ -610,7 +615,7 @@ img {
     background: linear-gradient(to right, #fe985b, #fe4fa7);
     color: #fff; }
 
-@media (max-width: 767px) {
+@media (max-width: 575px) {
   .section-callback-content {
     flex-wrap: wrap; } }
 
@@ -635,7 +640,7 @@ img {
       .section-adventages-content__desk-list li {
         display: flex;
         margin-bottom: 30px; }
-  @media (max-width: 767px) {
+  @media (max-width: 575px) {
     .section-adventages {
       margin: 60px 0px 30px; } }
 
@@ -661,7 +666,7 @@ img {
     background: linear-gradient(to right, #fe985b, #fe4fa7);
     color: #fff; }
 
-@media (max-width: 767px) {
+@media (max-width: 575px) {
   .section-footer-content {
     flex-wrap: wrap; } }
 
