@@ -478,7 +478,9 @@ img {
     .section-promo-wrapper__box-title {
       float: left;
       padding-left: 20px;
-      font-size: 14px; }
+      font-size: 14px;
+      line-height: 47px;
+      margin: 0px; }
 
 .section-promo-container {
   display: flex;
@@ -499,13 +501,15 @@ img {
 
 @media (max-width: 991px) {
   .section-promo-wrapper {
-    flex-wrap: wrap;
-    margin-top: 30px;
-    padding: 5px; }
-    .section-promo-wrapper__box {
-      margin: 0 auto;
-      padding: 10px 0px;
-      width: 80%; } }
+    flex-wrap: wrap; } }
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .section-promo-wrapper__box {
+    width: 80%;
+    padding: 20px;
+    margin: 0 auto; }
+    .section-promo-wrapper__box-title {
+      font-size: 22px; } }
 
 @media (max-width: 767px) {
   .section-promo-content {
@@ -517,12 +521,15 @@ img {
     flex-wrap: wrap; }
     .section-promo-container__box {
       flex-basis: 50%;
-      margin-top: 30px; } }
+      margin-top: 30px;
+      padding: 10px 0px; } }
 
 @media (max-width: 320px) {
-  .section-promo-wrapper__box {
-    padding-left: 10px;
-    width: 100%; } }
+  .section-promo-wrapper {
+    padding: 5px; }
+    .section-promo-wrapper__box {
+      width: 100%;
+      padding-left: 0px; } }
 
 .section-buying {
   background: #f4f4f4;
