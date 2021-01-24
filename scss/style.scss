@@ -48,6 +48,11 @@ h4 {
     @include font-montserrat;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .section-outer {
     padding-right: 20px;
     padding-left: 20px;
@@ -107,7 +112,11 @@ h4 {
     background: $color-grey;
 
     &-content {
-        &__title {}
+        &__title {
+           text-align: center;
+          
+           font-size: 24px;
+        }
     }
 
     &-wrapper {
@@ -117,11 +126,9 @@ h4 {
 
         &__image {
             margin-left: -120px;
-            max-width: 438px;
 
-            img {
-                max-width: 438px;
-            }
+
+            img {}
         }
 
         &__subtitle {
@@ -129,9 +136,11 @@ h4 {
             text-align: right;
             line-height: 22px;
             font-size: $h3-size;
+            
         }
 
         &__form {
+           background: #fff;
             max-width: 400px;
             display: flex;
             flex-direction: column;
@@ -179,22 +188,46 @@ h4 {
 
     }
 
-    @media (max-width: $screen-lg-max) {
+    @media (max-width: $screen-md-max) {
+        &-content {
+            &__title {
+                order: 1;
+            }
+        }
+
         &-wrapper {
+            flex-direction: column;
+            margin-bottom: 60px;
+
+            &__image {
+                margin: 0 auto;
+
+                img {
+                    width: 100%;
+                }
+            }
+
             &__subtitle {
-                margin-right: 20px;
-                margin-left: 20px;
+                max-width: 100%;
+                text-align: left;
+                margin-right: 5px;
+                margin-left: 5px;
+                order: 3;
+                margin-top: 60px;
             }
 
             &__form {
+                order: 2;
+                margin-top: -10px;
                 &-input {
                     input {
-                        max-width: 358px;
+                        width: auto;
                     }
                 }
             }
         }
     }
+
 
 }
 
@@ -204,6 +237,7 @@ h4 {
 .section-promo {
     &-content {
         margin-bottom: 95px;
+        margin-top: 30px;
 
         &__title {
             text-align: center;
@@ -265,6 +299,33 @@ h4 {
             }
         }
     }
+
+    @media (max-width: $screen-md-max) {
+        &-content {
+            margin-bottom: 60px;
+            &__title {
+                margin-bottom: 10px;
+                margin-top: 60px;
+            }
+        }
+        &-wrapper {
+            flex-wrap: wrap;
+            margin-top: 30px;
+            padding: 5px;
+
+            &__box {
+                padding: 5px;
+            }
+        }
+
+        &-container {
+            flex-wrap: wrap;
+
+            &__box {
+                margin-top: 30px;
+            }
+        }
+    }
 }
 
 // === / promo ===
@@ -275,7 +336,6 @@ h4 {
     padding: 60px 20px;
 
     &-content {
-
         &__title {
             text-align: center;
             font-size: $h2-size;
@@ -292,6 +352,21 @@ h4 {
         }
 
         &__image {}
+    }
+
+    @media (max-width: $screen-md-max) {
+        padding-top: 30px;
+        &-wrapper {
+            flex-wrap: wrap;
+
+            &__image {
+                order: -1;
+            }
+            &__text {
+                text-align: left;
+                margin-top: 60px;
+            }
+        }
     }
 }
 
@@ -312,9 +387,7 @@ h4 {
         &__brands {
             margin-bottom: 45px;
 
-            img {
-                max-width: 1140px;
-            }
+            img {}
         }
     }
 
@@ -335,6 +408,14 @@ h4 {
                 font-size: $h3-size;
             }
         }
+    }
+
+    @media (max-width: $screen-md-max) {
+        &-container {
+            flex-wrap: wrap;
+
+        }
+
     }
 }
 
@@ -360,6 +441,11 @@ h4 {
         &__box {
             &-icon {
                 text-align: center;
+                margin-bottom: 30px;
+                h4 {
+                font-weight: 700;
+                margin-bottom: 0;
+                }
             }
 
             &-title,
@@ -372,6 +458,13 @@ h4 {
             &-title {}
 
             &-subtitle {}
+        }
+    }
+
+    @media (max-width: $screen-md-max) {
+        padding: 30px 0px;
+        &-wrapper {
+            flex-wrap: wrap;
         }
     }
 }
@@ -421,6 +514,11 @@ h4 {
         }
     }
 
+    @media (max-width: $screen-md-max) {
+        &-content {
+            flex-wrap: wrap;
+        }
+    }
 }
 
 // === / callback ===
@@ -429,13 +527,13 @@ h4 {
 .section-adventages {
     background: $color-grey;
     margin: 90px 0 60px;
-    padding-bottom: 90px;
+    padding-bottom: 30px;
 
     &-content {
         &__title {
             text-align: center;
             margin-top: 60px;
-            margin-bottom: 90px;
+            margin-bottom: 60px;
             font-size: $h2-size;
         }
 
@@ -450,24 +548,18 @@ h4 {
                     content: url('/img/nike.png');
                     padding-right: 20px;
                     vertical-align: middle;
-
-
                 }
 
                 li {
                     display: flex;
                     margin-bottom: 30px;
-
-
-
-
-
                 }
-
             }
         }
     }
-
+    @media (max-width: $screen-md-max) {
+        margin: 60px 0px 30px;
+    }
 }
 
 // === / adventages ===
@@ -507,6 +599,11 @@ h4 {
         }
     }
 
+    @media (max-width: $screen-md-max) {
+        &-content {
+            flex-wrap: wrap;
+        }
+    }
 }
 
 // === / footer ===
@@ -588,6 +685,31 @@ h4 {
                     color: #fff;
 
                 }
+            }
+        }
+    }
+
+    @media (max-width: $screen-md-max) {
+        padding-bottom: 30px;
+        margin-top: 60px;
+
+        &-content {
+            flex-wrap: wrap;
+
+            &-operator {
+                padding-left: 0px;
+                text-align: center;
+
+                img {}
+            }
+        }
+
+        &-wrapper {
+            &__form {
+                margin-top: 30px;
+                flex-direction: column;
+                height: 200px;
+                justify-content: space-between;
             }
         }
     }
