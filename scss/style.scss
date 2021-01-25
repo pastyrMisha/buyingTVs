@@ -367,19 +367,22 @@ img {
     }
 }
 
-
-
-
 @media (min-width: $screen-sm) and (max-width: $screen-md-max) {
     &-wrapper {
         &__box {
             width: 80%;
             padding: 20px;
+            display: flex;
+            justify-content: center;
         margin: 0 auto;
-            &-icon {}
+            &-icon {
+                width: auto;
+                margin-right: 30px;
+            }
             
             &-title {
                 font-size: 22px;
+                width: 400px;
             }
         }
     }
@@ -398,9 +401,9 @@ img {
             flex-wrap: wrap;
 
             &__box {
-                flex-basis: 50%;
+                flex-basis: 60%;
                 margin-top: 30px;
-                padding: 10px 0px;
+                padding: 10px;
             }
         }
     }
@@ -440,7 +443,13 @@ img {
 
         &__image {}
     }
-
+    @media (min-width: $screen-md) {
+        &-wrapper {
+            &__image {
+                margin-left: 20px;
+            }
+        }
+    }
     @media (max-width: $screen-sm-max) {
         padding-top: 30px;
 
@@ -692,7 +701,11 @@ img {
             color: #fff;
         }
     }
-
+    @media (min-width: $screen-md) and (max-width: $screen-md-max) {
+        &-wrapper {
+            padding-left: 20px;
+        }
+    }
     @media (max-width: $screen-sm-max) {
         &-content {
             flex-wrap: wrap;
@@ -783,12 +796,8 @@ img {
         }
     }
     
-    @media (min-width: $screen-sm) {
-        &-content {
-            align-items: center;
-        }
-    }
-    @media (max-width: $screen-sm-max) {
+    
+    @media (max-width: $screen-md-max) {
         padding-bottom: 30px;
         margin-top: 60px;
 
@@ -824,6 +833,24 @@ img {
             }
         }
     }
+    @media (min-width: $screen-md) and (max-width: $screen-md-max) {
+    &-content {
+       &-operator {
+           margin-left: 20px;
+       }
+    }
+    &-wrapper {
+        &__subtitle {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+}
+@media (min-width: $screen-sm) {
+    &-content {
+        align-items: center;
+    }
+}
 }
 
 // === / footercall ===
