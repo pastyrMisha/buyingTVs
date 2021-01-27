@@ -22,6 +22,7 @@ $h2-size: 23px;
 $h3-size: 18px;
 $h4-size: 14px;
 
+$screen-xs: 320px;
 $screen-sm: 576px;
 $screen-md: 768px;
 $screen-lg: 992px;
@@ -31,6 +32,7 @@ $screen-xs-max: 575px;
 $screen-sm-max: 767px;
 $screen-md-max: 991px;
 $screen-lg-max: 1199px;
+$screen-xl-max: 1499px;
 
 // === / Variables ===
 
@@ -105,6 +107,7 @@ img {
             font-weight: bold;
         }
     }
+
     @media (max-width: $screen-md-max) {
         &-content {
             &__logo {
@@ -116,13 +119,15 @@ img {
             }
         }
     }
+
     @media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
         &-content {
             &__logo {
                 margin: 0 auto;
+            }
         }
     }
-    }
+
     @media (max-width: $screen-sm-max) {
         padding: 10px;
 
@@ -216,7 +221,7 @@ img {
                 margin-bottom: 10px;
 
                 input {
-                    width: 358px;
+                    width: 313px;
                     border: 1px solid $color-black;
                     background: rgba(255, 255, 255, .25);
                     padding: 10px 20px;
@@ -249,36 +254,91 @@ img {
 
     }
 
-@media (min-width: $screen-md) and (max-width: $screen-md-max) {
-    &-wrapper {
-        flex-wrap: wrap;
-        &__image {
-            order: 1;
-            margin-left: 0px;
-            flex-basis: 50%;
-            img {
+    @media (min-width: $screen-xl) and (max-width: $screen-xl-max) {
+        &-wrapper {
+            &__image {
+                margin-left: -22px;
+            }
+            &__subtitle {
+                padding-right: 20px;
             }
         }
-        &__subtitle {
-            order: 3;
-            flex-basis: 100%;
-            max-width: 100%;
-            text-align: left;
-            padding: 30px;
-            border: 1px solid $color-black;
-            margin-top: -5px;
+    }
+
+    @media (max-width: $screen-lg-max) {
+        &-wrapper {
+            flex-wrap: wrap;
         }
-        &__form {
-            flex-basis: 40%;
-            order: 2;
-            &-input {
-                input {
-                width: 88%;
+    }
+
+    @media (min-width: $screen-md) and (max-width: $screen-lg-max) {
+        &-wrapper {
+            &__image {
+                margin-left: 0px;
+            }
+
+            &__subtitle {
+                max-width: 100%;
+                text-align: left;
+                padding: 30px;
+            }
+        }
+    }
+
+    @media (min-width: $screen-lg) and (max-width: $screen-lg-max) {
+        &-wrapper {
+            padding-bottom: 30px;
+            &__image {
+                flex-basis: 30%;
+                margin-bottom: -30px;
+            }
+
+            &__subtitle {
+                flex-basis: 30%;
+            }
+
+            &__form {
+                flex-basis: 29%;
+
+                &-input {
+                    input {
+                        width: 88%;
+                    }
                 }
             }
         }
     }
-}
+
+    @media (min-width: $screen-md) and (max-width: $screen-md-max) {
+        &-wrapper {
+            &__image {
+                order: 1;
+                margin-left: 0px;
+                flex-basis: 50%;
+
+                img {}
+            }
+
+            &__subtitle {
+                order: 3;
+                flex-basis: 100%;
+                border: 1px solid $color-black;
+                margin-top: -5px;
+            }
+
+            &__form {
+                flex-basis: 40%;
+                order: 2;
+
+                &-input {
+                    input {
+                        width: 88%;
+                    }
+                }
+            }
+        }
+    }
+
     @media (max-width: $screen-sm-max) {
         &-wrapper {
             flex-direction: column;
@@ -340,6 +400,7 @@ img {
 
     &-wrapper {
         display: flex;
+        justify-content: space-evenly;
         padding: 20px 20px 10px;
         margin-top: -50px;
         background-color: #fff;
@@ -393,41 +454,53 @@ img {
         }
     }
 
-
-
-@media (max-width: $screen-md-max) {
-    &-wrapper {
-        flex-wrap: wrap;
-        
-    }
-}
-
-@media (min-width: $screen-md) and (max-width: $screen-md-max) {
-    &-wrapper {
-        margin-top: 0px;
-    }
-}
-
-@media (min-width: $screen-sm) and (max-width: $screen-md-max) {
-    &-wrapper {
-        &__box {
-            width: 80%;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-        margin: 0 auto;
-            &-icon {
-                width: auto;
-                margin-right: 30px;
+    @media (min-width: $screen-lg) and (max-width: $screen-lg-max) {
+        &-wrapper {
+            padding: 20px 0px 10px;
+            &__box {
+                padding-left: 20px;
+                &-title {
+                    padding-left: 10px;
+                }
             }
-            
-            &-title {
-                font-size: 22px;
-                width: 400px;
+        }
+
+    }
+
+    @media (max-width: $screen-md-max) {
+        &-wrapper {
+            flex-wrap: wrap;
+
+        }
+    }
+
+    @media (min-width: $screen-md) and (max-width: $screen-md-max) {
+        &-wrapper {
+            margin-top: 0px;
+        }
+    }
+
+    @media (min-width: $screen-sm) and (max-width: $screen-md-max) {
+        &-wrapper {
+            &__box {
+                width: 80%;
+                padding: 20px;
+                display: flex;
+                justify-content: center;
+                margin: 0 auto;
+
+                &-icon {
+                    width: auto;
+                    margin-right: 30px;
+                }
+
+                &-title {
+                    font-size: 22px;
+                    width: 400px;
+                }
             }
         }
     }
-}
 
     @media (max-width: $screen-sm-max) {
         &-content {
@@ -438,6 +511,7 @@ img {
                 margin-top: 60px;
             }
         }
+
         &-container {
             flex-wrap: wrap;
 
@@ -448,15 +522,17 @@ img {
             }
         }
     }
-    @media (max-width: 320px) {
+
+    @media (max-width: $screen-xs) {
         &-wrapper {
             padding: 5px;
+
             &__box {
                 width: 100%;
                 padding-left: 0px;
             }
+        }
     }
-}
 }
 
 // === / promo ===
@@ -484,6 +560,7 @@ img {
 
         &__image {}
     }
+
     @media (min-width: $screen-md) {
         &-wrapper {
             &__image {
@@ -491,6 +568,7 @@ img {
             }
         }
     }
+
     @media (max-width: $screen-sm-max) {
         padding-top: 30px;
 
@@ -742,11 +820,13 @@ img {
             color: #fff;
         }
     }
+
     @media (min-width: $screen-md) and (max-width: $screen-md-max) {
         &-wrapper {
             padding-left: 20px;
         }
     }
+
     @media (max-width: $screen-sm-max) {
         &-content {
             flex-wrap: wrap;
@@ -791,6 +871,7 @@ img {
             font-weight: 300;
             font-size: $h3-size;
             flex-grow: 1;
+            margin-bottom: 30px;
 
         }
 
@@ -836,8 +917,7 @@ img {
             }
         }
     }
-    
-    
+
     @media (max-width: $screen-md-max) {
         padding-bottom: 30px;
         margin-top: 60px;
@@ -874,24 +954,27 @@ img {
             }
         }
     }
+
     @media (min-width: $screen-md) and (max-width: $screen-md-max) {
-    &-content {
-       &-operator {
-           margin-left: 20px;
-       }
-    }
-    &-wrapper {
-        &__subtitle {
-            padding-left: 30px;
-            padding-right: 30px;
+        &-content {
+            &-operator {
+                margin-left: 20px;
+            }
+        }
+
+        &-wrapper {
+            &__subtitle {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
         }
     }
-}
-@media (min-width: $screen-sm) {
-    &-content {
-        align-items: center;
+
+    @media (min-width: $screen-sm) {
+        &-content {
+            align-items: center;
+        }
     }
-}
 }
 
 // === / footercall ===
