@@ -411,17 +411,49 @@ img {
       padding: 0px 20px 10px; }
       .section-header-wrapper__form-title {
         padding-left: 10px; }
-      .section-header-wrapper__form-input {
+      .section-header-wrapper__form-input, .section-header-wrapper__form-checkbox {
         margin-bottom: 10px; }
-        .section-header-wrapper__form-input input {
-          width: 313px;
-          border: 1px solid #363636;
-          background: rgba(255, 255, 255, 0.25);
-          padding: 10px 20px;
-          outline: none;
-          border-radius: 4px; }
-          .section-header-wrapper__form-input input::placeholder {
-            color: #b9b9b9; }
+      .section-header-wrapper__form-input input {
+        width: 313px;
+        border: 1px solid #363636;
+        background: rgba(255, 255, 255, 0.25);
+        padding: 10px 20px;
+        outline: none;
+        border-radius: 4px; }
+        .section-header-wrapper__form-input input::placeholder {
+          color: #b9b9b9; }
+      .section-header-wrapper__form-checkbox {
+        font-size: 12px; }
+        .section-header-wrapper__form-checkbox__input:checked + .section-header-wrapper__form-checkbox__label::after {
+          transform: scale(1); }
+        .section-header-wrapper__form-checkbox__input {
+          display: none; }
+        .section-header-wrapper__form-checkbox__label {
+          line-height: 140%;
+          display: inline-flex;
+          align-items: center;
+          position: relative; }
+          .section-header-wrapper__form-checkbox__label::before {
+            content: "";
+            align-self: flex-start;
+            flex: 0 0 24px;
+            height: 24px;
+            border-radius: 4px;
+            margin: 0px 10px 0px 0px;
+            background-color: #f4f4f4; }
+          .section-header-wrapper__form-checkbox__label::after {
+            transition: transform 0.5s ease 0s;
+            content: "";
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            background-color: #cc3333;
+            border-radius: 4px;
+            transform: scale(0); }
+          .section-header-wrapper__form-checkbox__label span a {
+            color: #fe4fa7; }
       .section-header-wrapper__form-button {
         text-align: center; }
         .section-header-wrapper__form-button button {

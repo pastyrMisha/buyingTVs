@@ -39,21 +39,27 @@
                         <br>
                         Если Ваш телевизор неисправен, с разбитым кинескопом или же просто старый - не важно! Мы купим
                         его на запчасти и заплатим вам деньги.</p>
-                    <div class="section-header-wrapper__form">
-                        <h4 class="section-header-wrapper__form-title">Оставить заявку на выкуп</h4>
+                    
+                        <form action="#" id="form" class="section-header-wrapper__form">
+                        <h2 class="section-header-wrapper__form-title">Оставить заявку на выкуп</h2>
                         <div class="section-header-wrapper__form-input">
-                            <input type="text" placeholder="Название телевизора" />
+                            <input type="text" placeholder="Модель телевизора" />
                         </div>
                         <div class="section-header-wrapper__form-input">
                             <input type="text" placeholder="Желаемая цена" />
                         </div>
                         <div class="section-header-wrapper__form-input">
-                            <input type="text" placeholder="Ваш телефон" />
+                            <input type="text" placeholder="Ваш телефон*" required />
+                        </div>
+                        <div class="section-header-wrapper__form-checkbox">
+                            <input id="formAgreement" type="checkbox" name="agreement" class="section-header-wrapper__form-checkbox__input" checked />
+                            <label for="formAgreement" class="section-header-wrapper__form-checkbox__label"><span>Я даю свое согласие на обработку персональных данных в соответствии с <a href="#">Условиями</a>*</span></label>
                         </div>
                         <div class="section-header-wrapper__form-button">
-                            <button>Оставить заявку</button>
+                            <button type="submit" class="button__submit">Оставить заявку</button>
                         </div>
-                    </div>
+                    </form>
+                    
 
                 </div>
             </div>
@@ -169,8 +175,7 @@
                 </div>
             </div>
         </div>
-        </div>
-
+        
     </section>
     <!-- / founder -->
 
@@ -212,7 +217,6 @@
                 </div>
             </div>
 
-        </div>
         </div>
     </section>
     <!-- / whywe -->

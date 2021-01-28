@@ -101,7 +101,7 @@ img {
 
         }
 
-        &__location {}
+
 
         &__tel {
             font-weight: bold;
@@ -194,7 +194,7 @@ img {
             margin-left: -120px;
 
 
-            img {}
+
         }
 
         &__subtitle {
@@ -217,8 +217,14 @@ img {
                 padding-left: 10px;
             }
 
-            &-input {
+            &-input,
+            &-checkbox {
                 margin-bottom: 10px;
+            }
+
+
+            &-input {
+
 
                 input {
                     width: 313px;
@@ -232,6 +238,56 @@ img {
                         color: $color-holder;
 
                     }
+                }
+            }
+
+
+            &-checkbox {
+                font-size: 12px;
+
+                &__input:checked + &__label::after {
+                    transform: scale(1);
+                }
+
+                &__input {
+                    display: none;
+                }
+
+                &__label {
+                    line-height: 140%;
+                    display: inline-flex;
+                    align-items: center;
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        align-self: flex-start;
+                        flex: 0 0 24px;
+                        height: 24px;
+                        border-radius: 4px;
+                        margin: 0px 10px 0px 0px;
+                        background-color: $color-grey;
+                    }
+                    &::after {
+                        transition: transform 0.5s ease 0s;
+                        content: "";
+                        width: 16px;
+                        height: 16px;
+                        position: absolute;
+                        top: 4px;
+                        left: 4px;
+                        background-color: $color-red;
+                        border-radius: 4px;
+                        transform: scale(0);
+
+                    }
+                    span {
+                        a {
+                            color: #fe4fa7;
+                        }
+                    }
+
+
                 }
             }
 
@@ -259,6 +315,7 @@ img {
             &__image {
                 margin-left: -22px;
             }
+
             &__subtitle {
                 padding-right: 20px;
             }
@@ -288,6 +345,7 @@ img {
     @media (min-width: $screen-lg) and (max-width: $screen-lg-max) {
         &-wrapper {
             padding-bottom: 30px;
+
             &__image {
                 flex-basis: 30%;
                 margin-bottom: -30px;
@@ -316,7 +374,7 @@ img {
                 margin-left: 0px;
                 flex-basis: 50%;
 
-                img {}
+
             }
 
             &__subtitle {
@@ -457,8 +515,10 @@ img {
     @media (min-width: $screen-lg) and (max-width: $screen-lg-max) {
         &-wrapper {
             padding: 20px 0px 10px;
+
             &__box {
                 padding-left: 20px;
+
                 &-title {
                     padding-left: 10px;
                 }
@@ -558,7 +618,7 @@ img {
             text-align: right;
         }
 
-        &__image {}
+
     }
 
     @media (min-width: $screen-md) {
@@ -604,7 +664,7 @@ img {
         &__brands {
             margin-bottom: 45px;
 
-            img {}
+
         }
     }
 
@@ -614,7 +674,7 @@ img {
         justify-content: space-around;
 
 
-        &__image {}
+
 
         &__text {
 
@@ -675,9 +735,9 @@ img {
                 font-weight: 400;
             }
 
-            &-title {}
 
-            &-subtitle {}
+
+
         }
     }
 
@@ -698,8 +758,6 @@ img {
         margin-top: 60px;
         display: flex;
         justify-content: space-around;
-
-        &__image {}
     }
 
     &-wrapper {
@@ -793,7 +851,7 @@ img {
         display: flex;
         justify-content: space-around;
 
-        &__image {}
+
     }
 
     &-wrapper {
@@ -806,8 +864,6 @@ img {
         &__title {
             font-size: $h2-size;
         }
-
-        &__text {}
 
         &__callback {
             margin: 0;
@@ -912,7 +968,6 @@ img {
                     border-radius: 4px;
                     background: linear-gradient(to right, #fe985b, #fe4fa7);
                     color: #fff;
-
                 }
             }
         }
@@ -928,8 +983,6 @@ img {
             &-operator {
                 padding-left: 0px;
                 text-align: center;
-
-                img {}
             }
         }
 
