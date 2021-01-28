@@ -407,21 +407,24 @@ img {
       max-width: 400px;
       display: flex;
       flex-direction: column;
-      border: 1px solid #363636;
-      padding: 0px 20px 10px; }
+      padding: 0px 20px 20px;
+      box-shadow: 0 0 10px #b9b9b9; }
       .section-header-wrapper__form-title {
         padding-left: 10px; }
       .section-header-wrapper__form-input, .section-header-wrapper__form-checkbox {
         margin-bottom: 10px; }
       .section-header-wrapper__form-input input {
         width: 313px;
-        border: 1px solid #363636;
+        border: 1px solid #f4f4f4;
         background: rgba(255, 255, 255, 0.25);
         padding: 10px 20px;
         outline: none;
-        border-radius: 4px; }
+        border-radius: 4px;
+        transition: all 0.5s ease 0s; }
         .section-header-wrapper__form-input input::placeholder {
           color: #b9b9b9; }
+        .section-header-wrapper__form-input input:focus {
+          box-shadow: 0 0 15px #b9b9b9; }
       .section-header-wrapper__form-checkbox {
         font-size: 12px; }
         .section-header-wrapper__form-checkbox__input:checked + .section-header-wrapper__form-checkbox__label::after {
@@ -440,7 +443,8 @@ img {
             height: 24px;
             border-radius: 4px;
             margin: 0px 10px 0px 0px;
-            background-color: #f4f4f4; }
+            background-color: #f4f4f4;
+            cursor: pointer; }
           .section-header-wrapper__form-checkbox__label::after {
             transition: transform 0.5s ease 0s;
             content: "";
@@ -463,8 +467,20 @@ img {
           text-transform: uppercase;
           border: none;
           border-radius: 4px;
-          background: linear-gradient(to right, #fe985b, #fe4fa7);
-          color: #fff; }
+          background-color: #cc3333;
+          color: #fff;
+          cursor: pointer;
+          box-shadow: 0 5px 0 #f4f4f4;
+          letter-spacing: 1px;
+          transition: background-color 0.5s ease 0s;
+          position: relative;
+          top: 0; }
+          .section-header-wrapper__form-button button:hover {
+            background-color: #fe985b; }
+          .section-header-wrapper__form-button button:active {
+            top: 3px;
+            box-shadow: 0 2px 0 #f4f4f4;
+            outline: none; }
   @media (min-width: 1200px) and (max-width: 1499px) {
     .section-header-wrapper__image {
       margin-left: -22px; }
