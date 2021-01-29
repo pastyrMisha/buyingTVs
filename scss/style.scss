@@ -212,7 +212,7 @@ img {
             flex-direction: column;
             padding: 0px 20px 20px;
             box-shadow: 0 0 10px $color-holder;
-    
+
 
             &-title {
                 padding-left: 10px;
@@ -239,9 +239,11 @@ img {
                         color: $color-holder;
 
                     }
+
                     &:focus {
                         box-shadow: 0 0 15px $color-holder;
                     }
+
                     &._error {
                         box-shadow: 0 0 10px $color-red;
                     }
@@ -252,7 +254,16 @@ img {
             &-checkbox {
                 font-size: 12px;
 
-                &__input:checked + &__label::after {
+                &._error {
+                    label {
+                        &::before {
+                            box-shadow: 0 0 10px $color-red;
+                            transition: all 0.5s ease 0s;
+                        }
+                    }
+                }
+
+                &__input:checked+&__label::after {
                     transform: scale(1);
                 }
 
@@ -265,7 +276,7 @@ img {
                     display: inline-flex;
                     align-items: center;
                     position: relative;
-                   
+
 
                     &::before {
                         content: "";
@@ -277,6 +288,7 @@ img {
                         background-color: $color-grey;
                         cursor: pointer;
                     }
+
                     &::after {
                         transition: transform 0.5s ease 0s;
                         content: "";
@@ -290,6 +302,7 @@ img {
                         transform: scale(0);
 
                     }
+
                     span {
                         a {
                             color: #fe4fa7;
@@ -302,7 +315,7 @@ img {
 
             &-button {
                 text-align: center;
-                
+
 
                 button {
                     margin: 0;
@@ -319,9 +332,11 @@ img {
                     transition: background-color 0.5s ease 0s;
                     position: relative;
                     top: 0;
+
                     &:hover {
                         background-color: #fe985b;
                     }
+
                     &:active {
                         top: 3px;
                         box-shadow: 0 2px 0 $color-grey;

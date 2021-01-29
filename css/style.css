@@ -429,6 +429,9 @@ img {
           box-shadow: 0 0 10px #cc3333; }
       .section-header-wrapper__form-checkbox {
         font-size: 12px; }
+        .section-header-wrapper__form-checkbox._error label::before {
+          box-shadow: 0 0 10px #cc3333;
+          transition: all 0.5s ease 0s; }
         .section-header-wrapper__form-checkbox__input:checked + .section-header-wrapper__form-checkbox__label::after {
           transform: scale(1); }
         .section-header-wrapper__form-checkbox__input {
