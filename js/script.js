@@ -6,10 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     async function formSend(e) {
         e.preventDefault();
-
         let error = formValidate(form);
     }
-
 
     function formValidate(form) {
         let error = 0;
@@ -20,23 +18,36 @@ document.addEventListener('DOMContentLoaded', function () {
             formRemoveError(input);
 
             if (input.classList.contains('_tel')) {
-
+                if (telTest(input)) {
+                    formAddError(input);
+                    error++;
+                }
+            } else if (input.getAttribute("type") === "checkbox" && input.checked === false) {
+                formAddError(input);
+                error++;
+            } else {
+                if (input.value === '') {
+                    formAddError(input);
+                    error++;
+                }
             }
 
         }
     }
+
+
+
     function formAddError(input) {
-        input.parentElement.classlist.add('_error');
-        input.classlist.add('_error');
+        input.parentElement.classList.add('_error');
+        input.classList.add('_error');
     }
     function formRemoveError(input) {
-        input.parentElement.classlist.remove('_error');
-        input.classlist.remove('_error');
+        input.parentElement.classList.remove('_error');
+        input.classList.remove('_error');
     }
     // Функция теста телефона
     function telTest(input) {
-        return                                   .test(input.value)
+        return !/^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$/.test(input.value)
     }
-
-
+    
 });

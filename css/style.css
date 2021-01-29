@@ -425,6 +425,8 @@ img {
           color: #b9b9b9; }
         .section-header-wrapper__form-input input:focus {
           box-shadow: 0 0 15px #b9b9b9; }
+        .section-header-wrapper__form-input input._error {
+          box-shadow: 0 0 10px #cc3333; }
       .section-header-wrapper__form-checkbox {
         font-size: 12px; }
         .section-header-wrapper__form-checkbox__input:checked + .section-header-wrapper__form-checkbox__label::after {
