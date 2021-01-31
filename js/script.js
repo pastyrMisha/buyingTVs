@@ -7,6 +7,12 @@ document.addEventListener('DOMContentLoaded', function () {
     async function formSend(e) {
         e.preventDefault();
         let error = formValidate(form);
+
+        if (error === 0) {
+                
+        } else {
+            alert('Заполните обязательные поля');
+        }
     }
 
     function formValidate(form) {
@@ -33,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
         }
+        return error;
     }
 
 
