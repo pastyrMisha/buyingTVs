@@ -11,6 +11,10 @@
     $mail->IsHTML(true);
 
     // От кого письмо
-    $mail->setForm('info@fls.guru', 'Скупка TV');
+    $mail->setForm('info@.kupka.ru', 'Скупка TV');
     // Кому отправить
-    $mail->
+    $mail->addAddress('konkurent.msg@mail.ru');
+    // Тема письма
+    $mail->Subject = 'Заявка на скупку телевизора с сайта Скупка TV';
+
+    
