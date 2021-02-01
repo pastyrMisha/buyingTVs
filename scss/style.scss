@@ -212,7 +212,29 @@ img {
             flex-direction: column;
             padding: 0px 20px 20px;
             box-shadow: 0 0 10px $color-holder;
+            position: relative;
 
+            // === _sending ===
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(51, 51, 51, 0.9) url('../img/loading.gif') center / 50px no-repeat;
+            opacity: 0;
+            visibility: hidden;
+        }
+        &._sending {
+            &::after {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        // === / _sending ===
 
             &-title {
                 padding-left: 10px;
