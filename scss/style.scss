@@ -370,15 +370,21 @@ img {
 
     }
 
+    @media (min-width: $screen-xl) {
+        &-wrapper {
+            &__subtitle {
+                padding-right: 30px;
+            }
+        }
+    }
+
     @media (min-width: $screen-xl) and (max-width: $screen-xl-max) {
         &-wrapper {
             &__image {
                 margin-left: -22px;
             }
 
-            &__subtitle {
-                padding-right: 20px;
-            }
+           
         }
     }
 

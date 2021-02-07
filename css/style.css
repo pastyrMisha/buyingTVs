@@ -500,11 +500,12 @@ img {
             top: 3px;
             box-shadow: 0 2px 0 #f4f4f4;
             outline: none; }
+  @media (min-width: 1200px) {
+    .section-header-wrapper__subtitle {
+      padding-right: 30px; } }
   @media (min-width: 1200px) and (max-width: 1499px) {
     .section-header-wrapper__image {
-      margin-left: -22px; }
-    .section-header-wrapper__subtitle {
-      padding-right: 20px; } }
+      margin-left: -22px; } }
   @media (max-width: 1199px) {
     .section-header-wrapper {
       flex-wrap: wrap; } }
