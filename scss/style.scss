@@ -98,15 +98,32 @@ img {
         &__hour {
 
             font-weight: bold;
-
+            &::before {
+                content: url('/img/clock.png');
+                padding-right: 20px;
+                vertical-align: middle;
+            }
         }
-
+        &__location {
+            &::before {
+                content: url('/img/geo.png');
+                padding-right: 20px;
+                vertical-align: middle;
+            }
+        }
 
 
         &__tel {
             font-weight: bold;
+            &::before {
+                content: url('/img/tel.png');
+                padding-right: 20px;
+                vertical-align: middle;
+            }
         }
     }
+
+
 
     @media (max-width: $screen-md-max) {
         &-content {
