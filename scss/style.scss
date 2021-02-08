@@ -794,8 +794,19 @@ img {
 
     &-wrapper {
         &__brands {
+            display: flex;
+            flex-wrap: wrap;
             margin-bottom: 45px;
-
+            &-icon {
+                flex-basis: 130px;
+                img {
+                   width: 130px;
+                }
+            }
+// 
+// here
+// 
+// 
 
         }
     }

@@ -733,7 +733,13 @@ img {
     font-size: 23px; }
 
 .section-founder-wrapper__brands {
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 45px; }
+  .section-founder-wrapper__brands-icon {
+    flex-basis: 130px; }
+    .section-founder-wrapper__brands-icon img {
+      width: 130px; }
 
 .section-founder-container {
   display: flex;
