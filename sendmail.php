@@ -11,7 +11,7 @@
     $mail->IsHTML(true);
 
     // От кого письмо
-    $mail->setForm('info@.kupka.ru', 'Скупка TV');
+    $mail->setForm('support@skuptv.ru', 'Скупка TV');
     // Кому отправить
     $mail->addAddress('SkKonkurent@yandex.ru');
     // Тема письма
