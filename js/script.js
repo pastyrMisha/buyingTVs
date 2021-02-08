@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
             } else {
                 alert('Ошибка');
                 form.classList.remove('_sending');
-
             }
 
         } else {
