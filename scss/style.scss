@@ -187,6 +187,42 @@ img {
             }
         }
     }
+    @media (max-width: $screen-sm-max) {
+    &-content {
+        &__logo {
+            margin: 0 auto;
+        }
+        &__hour,
+        &__location,
+        &__tel {
+            font-size: $h3-size;
+        }
+    }
+}
+@media (max-width: $screen-xs-max) {
+    &-content {
+        &__hour,
+        &__location,
+        &__tel {
+            font-size: 13px;
+            &::before {
+            padding-right: 10px;
+            }
+        }
+    }
+}
+@media (max-width: $screen-xs) {
+    &-content {
+        &__hour,
+        &__location,
+        &__tel {
+            padding-left: 20px;
+            &::before {
+            display: none;
+            }
+        }
+    }
+}
 }
 
 // === / pre-header ===
@@ -666,13 +702,26 @@ img {
         }
     }
 
+    @media (max-width: $screen-xs-max) {
+        &-wrapper {
+            &__box {
+            width: 288px;
+            }
+    }
+}
+
     @media (max-width: $screen-xs) {
         &-wrapper {
             padding: 5px;
 
             &__box {
                 width: 100%;
-                padding-left: 0px;
+                padding: 10px 5px;
+                &-icon {
+                    img {
+                    width: 90%;
+                    }
+                }
             }
         }
     }
