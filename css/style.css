@@ -735,11 +735,16 @@ img {
 .section-founder-wrapper__brands {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 45px; }
+  margin-bottom: 45px;
+  justify-content: center; }
   .section-founder-wrapper__brands-icon {
-    flex-basis: 130px; }
-    .section-founder-wrapper__brands-icon img {
-      width: 130px; }
+    flex-basis: 160px;
+    text-align: center;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    transition: 300ms all ease-in-out; }
+    .section-founder-wrapper__brands-icon:hover {
+      outline: 1px solid black; }
 
 .section-founder-container {
   display: flex;
@@ -754,6 +759,10 @@ img {
 @media (max-width: 767px) {
   .section-founder-container {
     flex-wrap: wrap; } }
+
+@media (max-width: 575px) {
+  .section-founder-wrapper__brands-icon {
+    flex-basis: 50%; } }
 
 .section-whywe {
   background: #f4f4f4;
