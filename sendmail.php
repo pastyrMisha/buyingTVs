@@ -13,7 +13,7 @@
     // От кого письмо
     $mail->setForm('info@.kupka.ru', 'Скупка TV');
     // Кому отправить
-    $mail->addAddress('konkurent.msg@mail.ru');
+    $mail->addAddress('SkKonkurent@yandex.ru');
     // Тема письма
     $mail->Subject = 'Заявка на скупку телевизора с сайта Скупка TV';
     // Тело письма
