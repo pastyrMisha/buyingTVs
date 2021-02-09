@@ -20,8 +20,8 @@
     // Тело письма
     $body = '<h1>Заявка на покупку ТВ</h1>';
 
-    if(trim(!empty($_POST['name']))){
-        $body.='<p><strong>Модель ТВ:</strong> '.$_POST['name'].'</p>';
+    if(trim(!empty($_POST['model']))){
+        $body.='<p><strong>Модель ТВ:</strong> '.$_POST['model'].'</p>';
     }
     if(trim(!empty($_POST['price']))){
         $body.='<p><strong>Желаемая цена:</strong> '.$_POST['price'].'</p>';

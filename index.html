@@ -46,7 +46,7 @@
                         <form action="#" id="form" class="section-header-wrapper__form">
                         <h2 class="section-header-wrapper__form-title">Оставить заявку на выкуп</h2>
                         <div class="section-header-wrapper__form-input">
-                            <input type="text" name="name" placeholder="Модель телевизора" />
+                            <input type="text" name="model" placeholder="Модель телевизора" />
                         </div>
                         <div class="section-header-wrapper__form-input">
                             <input type="text" name="price" placeholder="Желаемая цена" />
@@ -341,20 +341,22 @@
                     <img src="img/operator.png" alt="Оператор по заявкам">
                 </div>
                 <div class="section-footercall-wrapper">
-                    <div class="section-footercall-wrapper__title">Нужно продать телевизор быстрее?</div>
+                    <div class="section-footercall-wrapper__title">Хотите узнать стоимость Вашего ТВ?</div>
                     <div class="section-footercall-wrapper__subtitle">Оставьте заявку на звонок и наш оператор свяжется
                         с Вами</div>
-                    <div class="section-footercall-wrapper__form">
+
+                    <form action="#" id="footer_form" class="section-footercall-wrapper__form">
                         <div class="section-footercall-wrapper__form-input">
-                            <input type="text" placeholder="Ваше имя">
+                            <input type="text" name="footname" placeholder="Ваше имя">
                         </div>
                         <div class="section-footercall-wrapper__form-input">
-                            <input type="text" placeholder="Телефон">
+                            <input type="text" name="foottel" class="_footerreq _footertel" placeholder="Телефон">
                         </div>
                         <div class="section-footercall-wrapper__form-button">
-                            <button>ОСТАВИТЬ ЗАЯВКУ</button>
+                            <button type="submit" class="footer_submit">ОСТАВИТЬ ЗАЯВКУ</button>
                         </div>
-                    </div>
+                    </form>
+
                 </div>
             </div>
         </div>
@@ -377,7 +379,7 @@
     <!-- / callback button -->
     <!-- callback form -->
     
-    
+    <!-- / callback form -->
     </section>
     <!-- / copyright -->
 <script src="js/script.js"> </script>
