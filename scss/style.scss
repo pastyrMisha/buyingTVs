@@ -80,12 +80,13 @@ img {
         &__logo {
             padding-top: 10px;
 
-
+            a {
 
             img {
                 min-width: 105px;
                 height: 49px;
             }
+        }
         }
 
         &__hour,
@@ -117,11 +118,13 @@ img {
 
         &__tel {
             font-weight: bold;
-
             &::before {
                 content: url('/img/tel.png');
                 padding-right: 20px;
                 vertical-align: middle;
+            }
+            a {
+                text-decoration: none;
             }
         }
     }
@@ -131,11 +134,13 @@ img {
     @media (max-width: $screen-md-max) {
         &-content {
             &__logo {
+                a {
                 img {
                     height: 65px;
                     margin-right: 5px;
                     margin-left: 5px;
                 }
+            }
             }
         }
     }
@@ -163,11 +168,14 @@ img {
                 grid-row-end: 4;
                 grid-column: 1;
 
+                    a{
                 img {
+                    
                     height: 65px;
                     margin-right: 5px;
                     margin-left: 5px;
                 }
+            }
             }
 
             &__hour {
@@ -811,7 +819,7 @@ img {
             flex-wrap: wrap;
             margin-bottom: 45px;
             justify-content: center;
-
+            
             &-icon {
                 flex-basis: 160px;
                 text-align: center;
@@ -819,7 +827,7 @@ img {
                 padding-top: 5px;
                 transition: 300ms all ease-in-out;
                 &:hover {
-                    outline: 1px solid black;
+                    box-shadow: 0px 7px 25px 1px rgba(0, 0, 0, 0.08);
                    
                 }
             }
