@@ -13,21 +13,19 @@
     // От кого письмо
     $mail->setFrom('support@skuptv.ru', 'Скупка TV');
     // Кому отправить
-    $mail->addAddress('SkKonkurent@yandex.ru', 'skturner@yandex.ru');
+    $mail->addAddress('SkKonkurent@yandex.ru', 'skupka-tv@mail.ru');
     // Тема письма
-    $mail->Subject = 'Заявка на скупку телевизора с сайта Скупка TV';
+    $mail->Subject = 'Заявка на узнать цену ТВ с сайта Скупка TV';
 
     // Тело письма
-    $body = '<h1>Заявка на покупку ТВ</h1>';
+    $body = '<h1>Заявка на узнать цену ТВ</h1>';
 
-    if(trim(!empty($_POST['model']))){
-        $body.='<p><strong>Модель ТВ:</strong> '.$_POST['model'].'</p>';
+    if(trim(!empty($_POST['footname']))){
+        $body.='<p><strong>Имя:</strong> '.$_POST['footname'].'</p>';
     }
-    if(trim(!empty($_POST['price']))){
-        $body.='<p><strong>Желаемая цена:</strong> '.$_POST['price'].'</p>';
-    }
-    if(trim(!empty($_POST['tel']))){
-        $body.='<p><strong>Телефон клиента:</strong> '.$_POST['tel'].'</p>';
+
+    if(trim(!empty($_POST['foottel']))){
+        $body.='<p><strong>Телефон клиента:</strong> '.$_POST['foottel'].'</p>';
     }
     $mail->Body = $body;
 
