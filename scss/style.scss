@@ -1151,6 +1151,30 @@ img {
             padding: 0px 0px 10px;
             align-items: center;
 
+
+            // === _footsending ===
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(255, 255, 255, 0.9) url('../img/loading.gif') center / 50px no-repeat;
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            &._footsending {
+                &::after {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+            // === / _footsending ===
+
             &-input {
                 flex-grow: 1;
 
