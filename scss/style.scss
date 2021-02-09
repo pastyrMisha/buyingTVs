@@ -1190,6 +1190,11 @@ img {
                     &::placeholder {
                         color: $color-holder;
                     }
+                    &._error {
+                        box-shadow: 0 0 10px $color-red;
+                    }
+                       
+                    
                 }
             }
 

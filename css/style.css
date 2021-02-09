@@ -966,6 +966,8 @@ img {
           border-radius: 2px; }
           .section-footercall-wrapper__form-input input::placeholder {
             color: #b9b9b9; }
+          .section-footercall-wrapper__form-input input._error {
+            box-shadow: 0 0 10px #cc3333; }
       .section-footercall-wrapper__form-button {
         flex-grow: 1;
         text-align: center;

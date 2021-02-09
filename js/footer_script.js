@@ -34,13 +34,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function formValidate(footerForm) {
         let error = 0;
-        let formReq = document.querySelectorAll('._footreq');
+        let formReq = document.querySelectorAll('._footerreq');
 
         for (let index = 0; index < formReq.length; index++) {
             const input = formReq[index];
             formRemoveError(input);
 
-            if (input.classList.contains('_foottel')) {
+            if (input.classList.contains('_footertel')) {
                 if (telTest(input)) {
                     formAddError(input);
                     error++;
