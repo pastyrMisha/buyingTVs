@@ -2,9 +2,9 @@
 
 document.addEventListener('DOMContentLoaded', function () {
     const footerForm = document.getElementById('footer_form');
-    footerForm.addEventListener('footer_submit', formSend);
+    footerForm.addEventListener('submit', footerFormSend);
 
-    async function formSend(e) {
+    async function footerFormSend(e) {
         e.preventDefault();
         let error = formValidate(footerForm);
 
