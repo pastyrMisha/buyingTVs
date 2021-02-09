@@ -13,7 +13,8 @@
     // От кого письмо
     $mail->setFrom('support@skuptv.ru', 'Скупка TV');
     // Кому отправить
-    $mail->addAddress('SkKonkurent@yandex.ru', 'skturner@yandex.ru');
+    $mail->addAddress('SkKonkurent@yandex.ru');
+    $mail->addAddress('SkTurner@yandex.ru');
     // Тема письма
     $mail->Subject = 'Заявка на скупку телевизора с сайта Скупка TV';
 
