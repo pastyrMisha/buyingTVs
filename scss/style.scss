@@ -46,7 +46,8 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4,
+input {
     @include font-montserrat;
 }
 
@@ -1335,7 +1336,7 @@ color: #03a9f4;
 opacity: 0;
 font-size: 0;
     position:absolute;
-    right: 4px;
+    right: 2px;
     top: 22px;
 line-height: 14px;
     font-weight: 600;
@@ -1526,3 +1527,30 @@ transform: rotateZ(0deg);
 }
 
 // === / copyright ====
+
+
+
+// === callback form ===
+
+#overlay {
+    background: #00000080;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9990;
+}
+
+#magnify {
+    position: fixed;
+    max-width: 600px;
+    height: auto;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+// === / callback form ===
