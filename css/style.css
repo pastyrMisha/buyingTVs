@@ -1213,7 +1213,7 @@ img {
   width: 100%;
   z-index: 9990; }
 
-#magnify {
+#modal {
   position: fixed;
   max-width: 600px;
   height: auto;
