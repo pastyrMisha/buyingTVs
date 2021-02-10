@@ -22,7 +22,7 @@ $h2-size: 23px;
 $h3-size: 18px;
 $h4-size: 14px;
 
-$screen-xs: 320px;
+$screen-xs: 375px;
 $screen-sm: 576px;
 $screen-md: 768px;
 $screen-lg: 992px;
@@ -222,10 +222,10 @@ img {
             &__hour,
             &__location,
             &__tel {
-                font-size: 13px;
+                font-size: 12px;
 
                 &::before {
-                    padding-right: 10px;
+                    padding-right: 5px;
                 }
             }
         }
@@ -1614,7 +1614,10 @@ img {
     position: absolute;
     top: 15px;
     right: 15px;
-
+    @media (max-width: $screen-sm-max) {
+      top: -10px;
+      right: -5px;
+    }
 }
 
 @keyframes rota {
@@ -1735,6 +1738,37 @@ img {
 
             &:focus {
                 outline: none;
+            }
+        }
+    }
+    // @media (min-width: $screen-lg) and (max-width: $screen-lg-max) {
+    //     // flex-basis: 29%;
+    //     &-input {
+    //         input {
+    //             width: 88%;
+    //         }
+    //     }
+    // }
+    // @media (min-width: $screen-md) and (max-width: $screen-md-max) {
+    //     flex-basis: 40%;
+    //     &-input {
+    //         input {
+    //             width: 88%;
+    //         }
+    //     }
+    // }
+    @media (max-width: $screen-sm-max) {
+        padding-left: 10px;
+        max-width: 310px;
+        text-align: center;
+        &-title {
+            font-size: $h2-size;
+        }
+        &-input {
+            width: 250px;
+            input {
+                box-sizing: border-box;
+                width: 100%;
             }
         }
     }
