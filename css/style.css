@@ -1204,11 +1204,12 @@ img {
     -ms-transform: rotateZ(0deg);
     -webkit-transform: rotateZ(0deg); } }
 
-#callForm._show {
-  display: block; }
-
-#callForm._hide {
+#callForm {
   display: none; }
+  #callForm._show {
+    display: block; }
+  #callForm._hide {
+    display: none; }
 
 #overlay {
   background: #00000080;

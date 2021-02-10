@@ -81,13 +81,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// const maxi = document.querySelectorAll('.maximazed');
+const maxi = document.querySelectorAll('.maximazed');
+const callForm= document.getElementById('callForm');
+const closePopup= document.getElementById('closepopup');
 
-// maxi.forEach(element => element.addEventListener("click", function (evt) {
-// evt.preventDefault();
-// const callForm = document.getElementById('callForm');
+maxi.forEach(element => element.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        callForm.classList.remove("_hide");
+        callForm.classList.add("_show");
+}));
 
-// callForm.body.insertAdjacentHTML("beforeend", '<div id="overlay"></div><div id="modal"><form action="#" id="modal__form" class="modal__form"><h4 class="modal__form-title">Заказать звонок</h4><div class="modal__form-input"><input type="text" name="modaltel" class="_modalreq _modaltel" placeholder="Ваш телефон*" /></div><div class="modal__form-button"><button type="submit" class="botton__submit">ПЕРЕЗВОНИТЬ МНЕ</button></div></form><div id="closepopup" class="modal__popup"><i></i></div></div>');
+
+closePopup.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    callForm.classList.remove("_show");
+    callForm.classList.add("_hide");
+});
+
+
+
+
 
 // const newBlock = document.getElementById('modal');
 // const newLay = document.getElementById('overlay');
@@ -112,4 +125,4 @@ document.addEventListener('DOMContentLoaded', function () {
 // });
 
 
-// }));
+

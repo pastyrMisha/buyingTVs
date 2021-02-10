@@ -1574,6 +1574,7 @@ img {
 // === callback form ===
 
 #callForm {
+    display: none;
     &._show {
         display: block;
     }
