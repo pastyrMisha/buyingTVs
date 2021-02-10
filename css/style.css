@@ -1204,6 +1204,12 @@ img {
     -ms-transform: rotateZ(0deg);
     -webkit-transform: rotateZ(0deg); } }
 
+#callForm._show {
+  display: block; }
+
+#callForm._hide {
+  display: none; }
+
 #overlay {
   background: #00000080;
   position: fixed;
@@ -1221,3 +1227,98 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); }
+
+#closepopup {
+  width: 30px;
+  height: 30px;
+  background: #FFFFFF;
+  border: 1px solid #AFAFAF;
+  border-radius: 15px;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px; }
+
+@keyframes rota {
+  25% {
+    transform: rotate(360deg); } }
+
+.modal__popup:hover {
+  animation: rota 4s infinite normal;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1; }
+
+.modal__popup i {
+  width: 30px;
+  height: 30px;
+  background: url(https://codernote.ru/files/cross.png) no-repeat center center;
+  background-size: 16px 16px;
+  display: block; }
+  .modal__popup i:focus {
+    cursor: pointer; }
+
+.modal__form {
+  background: #fff;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 20px 20px;
+  box-shadow: 0 0 10px #b9b9b9;
+  position: relative;
+  align-items: center; }
+  .modal__form::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9) url("../img/loading.gif") center/50px no-repeat;
+    opacity: 0;
+    visibility: hidden; }
+  .modal__form._modalsending::after {
+    opacity: 1;
+    visibility: visible; }
+  .modal__form-title {
+    padding-left: 10px;
+    font-size: 23px; }
+  .modal__form-input {
+    margin-bottom: 30px; }
+    .modal__form-input input {
+      width: 313px;
+      border: 1px solid #f4f4f4;
+      background: rgba(255, 255, 255, 0.25);
+      padding: 10px 20px;
+      outline: none;
+      border-radius: 4px;
+      transition: all 0.5s ease 0s; }
+      .modal__form-input input::placeholder {
+        color: #b9b9b9; }
+      .modal__form-input input:focus {
+        box-shadow: 0 0 15px #b9b9b9; }
+      .modal__form-input input._error {
+        box-shadow: 0 0 10px #cc3333; }
+  .modal__form-button {
+    text-align: center; }
+    .modal__form-button button {
+      margin: 0;
+      padding: 16px 20px;
+      font-size: 18px;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 4px;
+      background-color: #03a9f4;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 5px 0 #f4f4f4;
+      letter-spacing: 1px;
+      transition: background-color 0.5s ease 0s;
+      position: relative;
+      top: 0; }
+      .modal__form-button button:hover {
+        background-color: #00bcd4; }
+      .modal__form-button button:active {
+        top: 3px;
+        box-shadow: 0 2px 0 #f4f4f4; }
+      .modal__form-button button:focus {
+        outline: none; }

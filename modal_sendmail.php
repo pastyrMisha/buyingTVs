@@ -21,12 +21,10 @@
     // Тело письма
     $body = '<h1>Заявка на пепезвонить мне</h1>';
 
-    if(trim(!empty($_POST['modalname']))){
-        $body.='<p><strong>Имя:</strong> '.$_POST['modalname'].'</p>';
-    }
     if(trim(!empty($_POST['modaltel']))){
         $body.='<p><strong>Телефон клиента:</strong> '.$_POST['modaltel'].'</p>';
     }
+    
     $mail->Body = $body;
 
     // Отправляем
