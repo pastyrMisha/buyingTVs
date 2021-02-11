@@ -67,7 +67,7 @@ img {
     display: flex;
     flex-direction: column;
 }
-html {
+.callback-bt, button{
     -webkit-appearance: none;
     -moz-appearance:    none;
     appearance:         none;
@@ -1337,6 +1337,10 @@ html {
         transition: .3s;
         -webkit-animation: hoverWave linear 1s infinite;
         animation: hoverWave linear 1s infinite;
+        -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+
     }
 
     .callback-bt .text-call {
@@ -1345,6 +1349,9 @@ html {
         border-radius: 50%;
         position: relative;
         overflow: hidden;
+        -webkit-appearance: none;
+        -moz-appearance:    none;
+        appearance:         none;
     }
 
     .callback-bt .text-call span {
@@ -1360,15 +1367,24 @@ html {
         text-transform: uppercase;
         transition: opacity .3s linear;
         font-family: 'montserrat', Arial, Helvetica, sans-serif;
+        -webkit-appearance: none;
+        -moz-appearance:    none;
+        appearance:         none;
     }
 
     .callback-bt .text-call:hover span {
         opacity: 1;
         font-size: 11px;
+        -webkit-appearance: none;
+        -moz-appearance:    none;
+        appearance:         none;
     }
 
     .callback-bt:hover i {
         display: none;
+        -webkit-appearance: none;
+        -moz-appearance:    none;
+        appearance:         none;
     }
 
     .callback-bt:hover {
@@ -1376,12 +1392,18 @@ html {
         background: #fff;
         color: transparent;
         transition: .3s;
+        -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
     }
 
     .callback-bt:hover i {
         color: #03a9f4;
         font-size: 40px;
         transition: .3s;
+        -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
     }
 
     .callback-bt i {
@@ -1390,6 +1412,9 @@ html {
         transition: .3s;
         line-height: 66px;
         transition: .5s ease-in-out;
+        -webkit-appearance: none;
+        -moz-appearance:    none;
+        appearance:         none;
     }
 
     .callback-bt i {
