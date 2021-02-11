@@ -74,7 +74,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */ }
 
 /**
@@ -468,6 +469,10 @@ img {
         outline: none;
         border-radius: 4px;
         transition: all 0.5s ease 0s; }
+        .section-header-wrapper__form-input input::-moz-placeholder {
+          color: #b9b9b9; }
+        .section-header-wrapper__form-input input:-ms-input-placeholder {
+          color: #b9b9b9; }
         .section-header-wrapper__form-input input::placeholder {
           color: #b9b9b9; }
         .section-header-wrapper__form-input input:focus {
@@ -966,6 +971,10 @@ img {
           padding: 10px 20px;
           outline: none;
           border-radius: 2px; }
+          .section-footercall-wrapper__form-input input::-moz-placeholder {
+            color: #b9b9b9; }
+          .section-footercall-wrapper__form-input input:-ms-input-placeholder {
+            color: #b9b9b9; }
           .section-footercall-wrapper__form-input input::placeholder {
             color: #b9b9b9; }
           .section-footercall-wrapper__form-input input._error {
@@ -1244,12 +1253,17 @@ img {
       top: -10px;
       right: -5px; } }
 
+@-webkit-keyframes rota {
+  25% {
+    transform: rotate(360deg); } }
+
 @keyframes rota {
   25% {
     transform: rotate(360deg); } }
 
 .modal__popup:hover {
-  animation: rota 4s infinite normal;
+  -webkit-animation: rota 4s infinite normal;
+          animation: rota 4s infinite normal;
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1; }
 
@@ -1297,6 +1311,10 @@ img {
       outline: none;
       border-radius: 4px;
       transition: all 0.5s ease 0s; }
+      .modal__form-input input::-moz-placeholder {
+        color: #b9b9b9; }
+      .modal__form-input input:-ms-input-placeholder {
+        color: #b9b9b9; }
       .modal__form-input input::placeholder {
         color: #b9b9b9; }
       .modal__form-input input:focus {
