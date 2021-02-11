@@ -67,6 +67,15 @@ img {
     display: flex;
     flex-direction: column;
 }
+.btn, button{
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+ }
+ 
+ .btn:focus, button:focus{
+   outline: none;
+ } 
 // === / Common ===
 
 // === pre-header ===
