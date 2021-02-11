@@ -964,7 +964,7 @@ img {
       .section-footercall-wrapper__form-input {
         flex-grow: 1; }
         .section-footercall-wrapper__form-input input {
-          width: 80%;
+          width: 75%;
           border: 1px solid #f4f4f4;
           background: #fff;
           margin: 0;

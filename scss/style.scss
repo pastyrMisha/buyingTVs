@@ -67,7 +67,6 @@ img {
     display: flex;
     flex-direction: column;
 }
-
 // === / Common ===
 
 // === pre-header ===
@@ -615,6 +614,7 @@ img {
 
             &-icon {
                 float: left;
+
             }
 
             &-title {
@@ -1186,7 +1186,7 @@ img {
                 flex-grow: 1;
 
                 input {
-                    width: 80%;
+                    width: 75%;
                     border: 1px solid $color-grey;
                     background: #fff;
                     margin: 0;
@@ -1741,22 +1741,7 @@ img {
             }
         }
     }
-    // @media (min-width: $screen-lg) and (max-width: $screen-lg-max) {
-    //     // flex-basis: 29%;
-    //     &-input {
-    //         input {
-    //             width: 88%;
-    //         }
-    //     }
-    // }
-    // @media (min-width: $screen-md) and (max-width: $screen-md-max) {
-    //     flex-basis: 40%;
-    //     &-input {
-    //         input {
-    //             width: 88%;
-    //         }
-    //     }
-    // }
+
     @media (max-width: $screen-sm-max) {
         padding-left: 10px;
         max-width: 310px;
