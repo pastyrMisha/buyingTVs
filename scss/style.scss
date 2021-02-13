@@ -134,6 +134,7 @@ img {
             }
         }
     }
+
     @media (max-width: $screen-md-max) {
         &-content {
             &__logo {
@@ -334,13 +335,14 @@ img {
                         left: 5%;
                     }
                 }
+
                 input {
                     width: 313px;
                     border: 1px solid $color-grey;
                     background: rgba(255, 255, 255, .25);
                     padding: 10px 20px;
                     outline: none;
-                    border-radius: 4px;
+                    border-radius: 2px;
                     transition: all 0.5s ease 0s;
 
                     &::placeholder {
@@ -355,7 +357,7 @@ img {
                     &._error {
                         box-shadow: 0 0 10px $color-red;
                         margin-bottom: 40px;
-                        
+
                     }
                 }
             }
@@ -584,6 +586,15 @@ img {
                 &-input {
                     width: 80%;
 
+                    &._error {
+                        &::before {
+                            left: 15%;
+                        }
+                    }
+
+
+
+
                     input {
                         width: 90%;
                     }
@@ -592,6 +603,24 @@ img {
         }
     }
 
+    @media (max-width: 360px) {
+
+
+        &-wrapper {
+            &__form {
+                &-input {
+                    &._error {
+                        &::before {
+
+                            font-size: 15px;
+                            top: 245px;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
 
 }
 
@@ -1064,8 +1093,10 @@ img {
         margin-top: 60px;
         display: flex;
         justify-content: space-around;
+
         &__image {
             flex-basis: 70%;
+
             &-map {
                 width: 88%;
             }
@@ -1083,9 +1114,11 @@ img {
         &__title {
             font-size: $h2-size;
         }
+
         &__text {
             line-height: 22px;
         }
+
         &__callback {
             align-self: flex-start;
             margin: 0;
@@ -1127,11 +1160,13 @@ img {
     @media (max-width: $screen-sm-max) {
         &-content {
             flex-wrap: wrap;
+
             &__image {
                 text-align: center;
                 flex-basis: 100%;
             }
         }
+
         &-wrapper {
             display: flex;
             flex-direction: column;
@@ -1139,6 +1174,7 @@ img {
             flex-basis: 100%;
             text-align: center;
             padding: 10px;
+
             &__callback {
                 align-self: center;
             }
@@ -1221,17 +1257,33 @@ img {
             &-input {
                 flex-grow: 1;
 
+                &._error {
+                    &::before {
+                        position: absolute;
+                        content: 'Заполните обязательные поля!';
+                        font-size: 16px;
+                        color: $color-red;
+                        bottom: -10px;
+                        left: 36%;
+                    }
+                }
+
                 input {
                     width: 75%;
                     border: 1px solid $color-grey;
-                    background: #fff;
+                    background: $color-white;
                     margin: 0;
                     padding: 10px 20px;
                     outline: none;
                     border-radius: 2px;
+                    transition: all 0.5s ease 0s;
 
                     &::placeholder {
                         color: $color-holder;
+                    }
+
+                    &:focus {
+                        box-shadow: 0 0 5px $color-white;
                     }
 
                     &._error {
@@ -1309,6 +1361,19 @@ img {
                 &-button {
                     width: 80%;
                 }
+
+                &-input {
+                    &._error {
+                        &::before {
+                            position: absolute;
+                            content: 'Заполните обязательные поля!';
+                            font-size: 16px;
+                            color: $color-red;
+                            top: -35px;
+                            left: 30%;
+                        }
+                    }
+                }
             }
         }
     }
@@ -1332,6 +1397,26 @@ img {
         &-content {
             align-items: center;
         }
+    }
+
+    @media (max-width: $screen-xs-max) {
+        &-wrapper {
+            &__form {
+                &-input {
+                    &._error {
+                        &::before {
+                            position: absolute;
+                            content: 'Заполните обязательные поля!';
+                            font-size: 16px;
+                            color: $color-red;
+                            top: -35px;
+                            left: 15%;
+                        }
+                    }
+                }
+            }
+        }
+
     }
 }
 
@@ -1611,9 +1696,11 @@ img {
 
 #callForm {
     display: none;
+
     &._show {
         display: block;
     }
+
     &._hide {
         display: none;
     }
@@ -1650,17 +1737,20 @@ img {
     position: absolute;
     top: 15px;
     right: 15px;
+
     @media (max-width: $screen-sm-max) {
-      top: -10px;
-      right: -5px;
+        top: -10px;
+        right: -5px;
     }
 }
 
 @keyframes rota {
-    25% { transform: rotate(360deg); }
-   }
+    25% {
+        transform: rotate(360deg);
+    }
+}
 
-.modal__popup {    
+.modal__popup {
     &:hover {
         animation: rota 4s infinite normal;
         -webkit-animation-iteration-count: 1;
@@ -1673,6 +1763,7 @@ img {
         background: url(https://codernote.ru/files/cross.png) no-repeat center center;
         background-size: 16px 16px;
         display: block;
+
         &:focus {
             cursor: pointer;
         }
@@ -1687,9 +1778,9 @@ img {
     padding: 0px 20px 20px;
     box-shadow: 0 0 10px $color-holder;
     position: relative;
-    align-items: center; 
+    align-items: center;
 
-// === _modalsending ===
+    // === _modalsending ===
 
     &::after {
         content: '';
@@ -1709,6 +1800,7 @@ img {
             visibility: visible;
         }
     }
+
     // === / _modalsending ===
 
     &-title {
@@ -1718,6 +1810,17 @@ img {
 
     &-input {
         margin-bottom: 30px;
+
+        &._error {
+            &::before {
+                position: absolute;
+                content: 'Заполните обязательные поля!';
+                font-size: 16px;
+                color: $color-red;
+                top: 55%;
+                left: 5%;
+            }
+        }
 
         input {
             width: 313px;
@@ -1739,6 +1842,7 @@ img {
 
             &._error {
                 box-shadow: 0 0 10px $color-red;
+                margin-bottom: 20px;
             }
         }
     }
@@ -1782,11 +1886,14 @@ img {
         padding-left: 10px;
         max-width: 310px;
         text-align: center;
+
         &-title {
             font-size: $h2-size;
         }
+
         &-input {
             width: 250px;
+
             input {
                 box-sizing: border-box;
                 width: 100%;
@@ -1794,4 +1901,5 @@ img {
         }
     }
 }
+
 // === / callback form ===

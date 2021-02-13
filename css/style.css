@@ -330,7 +330,7 @@ img {
         background: rgba(255, 255, 255, 0.25);
         padding: 10px 20px;
         outline: none;
-        border-radius: 4px;
+        border-radius: 2px;
         transition: all 0.5s ease 0s; }
         .section-header-wrapper__form-input input::-moz-placeholder {
           color: #b9b9b9; }
@@ -469,8 +469,14 @@ img {
         align-items: center; }
         .section-header-wrapper__form-input {
           width: 80%; }
+          .section-header-wrapper__form-input._error::before {
+            left: 15%; }
           .section-header-wrapper__form-input input {
             width: 90%; } }
+  @media (max-width: 360px) {
+    .section-header-wrapper__form-input._error::before {
+      font-size: 15px;
+      top: 245px; } }
 
 .section-promo-content {
   margin-bottom: 95px;
@@ -847,6 +853,13 @@ img {
         visibility: visible; }
       .section-footercall-wrapper__form-input {
         flex-grow: 1; }
+        .section-footercall-wrapper__form-input._error::before {
+          position: absolute;
+          content: 'Заполните обязательные поля!';
+          font-size: 16px;
+          color: #cc3333;
+          bottom: -10px;
+          left: 36%; }
         .section-footercall-wrapper__form-input input {
           width: 75%;
           border: 1px solid #f4f4f4;
@@ -854,13 +867,16 @@ img {
           margin: 0;
           padding: 10px 20px;
           outline: none;
-          border-radius: 2px; }
+          border-radius: 2px;
+          transition: all 0.5s ease 0s; }
           .section-footercall-wrapper__form-input input::-moz-placeholder {
             color: #b9b9b9; }
           .section-footercall-wrapper__form-input input:-ms-input-placeholder {
             color: #b9b9b9; }
           .section-footercall-wrapper__form-input input::placeholder {
             color: #b9b9b9; }
+          .section-footercall-wrapper__form-input input:focus {
+            box-shadow: 0 0 5px #fff; }
           .section-footercall-wrapper__form-input input._error {
             box-shadow: 0 0 10px #cc3333; }
       .section-footercall-wrapper__form-button {
@@ -905,7 +921,14 @@ img {
         height: 200px;
         justify-content: space-between; }
         .section-footercall-wrapper__form-input, .section-footercall-wrapper__form-button {
-          width: 80%; } }
+          width: 80%; }
+        .section-footercall-wrapper__form-input._error::before {
+          position: absolute;
+          content: 'Заполните обязательные поля!';
+          font-size: 16px;
+          color: #cc3333;
+          top: -35px;
+          left: 30%; } }
   @media (min-width: 768px) and (max-width: 991px) {
     .section-footercall-content-operator {
       margin-left: 20px; }
@@ -915,6 +938,14 @@ img {
   @media (min-width: 576px) {
     .section-footercall-content {
       align-items: center; } }
+  @media (max-width: 575px) {
+    .section-footercall-wrapper__form-input._error::before {
+      position: absolute;
+      content: 'Заполните обязательные поля!';
+      font-size: 16px;
+      color: #cc3333;
+      top: -35px;
+      left: 15%; } }
 
 .section-copyright {
   height: 90px;
@@ -1187,6 +1218,13 @@ img {
     font-size: 23px; }
   .modal__form-input {
     margin-bottom: 30px; }
+    .modal__form-input._error::before {
+      position: absolute;
+      content: 'Заполните обязательные поля!';
+      font-size: 16px;
+      color: #cc3333;
+      top: 55%;
+      left: 5%; }
     .modal__form-input input {
       width: 313px;
       border: 1px solid #f4f4f4;
@@ -1204,7 +1242,8 @@ img {
       .modal__form-input input:focus {
         box-shadow: 0 0 15px #b9b9b9; }
       .modal__form-input input._error {
-        box-shadow: 0 0 10px #cc3333; }
+        box-shadow: 0 0 10px #cc3333;
+        margin-bottom: 20px; }
   .modal__form-button {
     text-align: center; }
     .modal__form-button button {

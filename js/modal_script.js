@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
         } else {
-            alert('Заполните обязательные поля');
+            // alert('Заполните обязательные поля');
         }
     }
 
