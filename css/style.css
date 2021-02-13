@@ -322,7 +322,7 @@ img {
       .section-header-wrapper__form._sending::after {
         opacity: 1;
         visibility: visible; }
-      .section-header-wrapper__form._welldone::after {
+      .section-header-wrapper__form._welldone::before {
         opacity: 1;
         visibility: visible; }
       .section-header-wrapper__form-title {
