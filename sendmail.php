@@ -33,9 +33,7 @@
     $mail->Body = $body;
 
     // Отправляем
-    if (!$mail->send()) {
-        $message = 'Ошибка';
-    } else {
+    if ($mail->send()) {
         $message = '1';
     }
 

@@ -303,6 +303,17 @@ img {
                 opacity: 0;
                 visibility: hidden;
             }
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(255, 255, 255, 0.9) url('../img/anim-check.gif') center / 50px no-repeat;
+                opacity: 0;
+                visibility: hidden;
+            }
 
             &._sending {
                 &::after {
@@ -316,14 +327,7 @@ img {
             // ===  _welldone ===
 
             &._welldone {
-                &::after {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background: rgba(255, 255, 255, 0.9) url('../img/anim-check.gif') center / 50px no-repeat;
+                &::before {
                     opacity: 1;
                     visibility: visible;
                 }
