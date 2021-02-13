@@ -36,7 +36,7 @@
     if (!$mail->send()) {
         $message = 'Ошибка';
     } else {
-        $message = 'Ваша заявка принята!';
+        $message = '1';
     }
 
     $response = ['message' => $message];

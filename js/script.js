@@ -19,7 +19,9 @@ document.addEventListener('DOMContentLoaded', function () {
             });
             if (response.ok) {
                 let result = await response.json();
-                alert(result.message);
+                if (result.message === '1') {
+                    form.classList.add('_welldone');
+                }
                 form.reset();
                 form.classList.remove('_sending');
             } else {
