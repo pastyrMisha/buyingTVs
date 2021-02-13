@@ -13,7 +13,7 @@
     // От кого письмо
     $mail->setFrom('support@skuptv.ru', 'Скупка TV');
     // Кому отправить
-    // $mail->addAddress('skupka-tv@mail.ru');
+    $mail->addAddress('skupka-tv@mail.ru');
     $mail->addAddress('skkonkurent@yandex.ru');
     // Тема письма
     $mail->Subject = 'Заявка на обратный звонок';
@@ -31,7 +31,7 @@
     if (!$mail->send()) {
         $message = 'Ошибка';
     } else {
-        $message = 'Данные отправлены!';
+        $message = 'Ваша заявка принята!';
     }
 
     $response = ['message' => $message];

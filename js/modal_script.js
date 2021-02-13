@@ -27,8 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 modalForm.classList.remove('_modalsending');
             }
 
-        } else {
-            // alert('Заполните обязательные поля');
         }
     }
 
@@ -62,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
         input.parentElement.classList.add('_error');
         input.classList.add('_error');
     }
+
     function formRemoveError(input) {
         input.parentElement.classList.remove('_error');
         input.classList.remove('_error');
@@ -70,25 +69,19 @@ document.addEventListener('DOMContentLoaded', function () {
     function telTest(input) {
         return !/^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$/.test(input.value)
     }
-    
+
 });
 
 
 
-
-
-
-
-
-
 const maxi = document.querySelectorAll('.maximazed');
-const callForm= document.getElementById('callForm');
-const closePopup= document.getElementById('closepopup');
+const callForm = document.getElementById('callForm');
+const closePopup = document.getElementById('closepopup');
 
 maxi.forEach(element => element.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        callForm.classList.remove("_hide");
-        callForm.classList.add("_show");
+    evt.preventDefault();
+    callForm.classList.remove("_hide");
+    callForm.classList.add("_show");
 }));
 
 
@@ -97,32 +90,3 @@ closePopup.addEventListener("click", function (evt) {
     callForm.classList.remove("_show");
     callForm.classList.add("_hide");
 });
-
-
-
-
-
-// const newBlock = document.getElementById('modal');
-// const newLay = document.getElementById('overlay');
-// fadeIn(newLay, 300);
-// fadeIn(newBlock, 300);
-// const closePopup = document.getElementById('closepopup');
-
-// closePopup.addEventListener("click", function (evt) {
-//     evt.preventDefault();
-//     fadeOut(newLay, 900);
-// fadeOut(newBlock, 900);
-//     document.body.removeChild(newBlock);
-//     document.body.removeChild(newLay);
-// });
-
-// newLay.addEventListener("click", function (evt) {
-//     evt.preventDefault();
-//     fadeOut(newLay, 900);
-// fadeOut(newBlock, 900);
-//     document.body.removeChild(newBlock);
-//     document.body.removeChild(newLay);
-// });
-
-
-
