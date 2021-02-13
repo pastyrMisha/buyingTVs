@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   vertical-align: baseline; }
 
@@ -159,7 +160,9 @@ textarea {
 body {
   font-family: 'Raleway', sans-serif;
   background: white;
-  color: #4b4b4b; }
+  color: #4b4b4b;
+  margin-left: 0px;
+  margin-right: 0px; }
 
 h1,
 h2,
@@ -314,6 +317,13 @@ img {
         text-align: center; }
       .section-header-wrapper__form-input, .section-header-wrapper__form-checkbox {
         margin-bottom: 10px; }
+      .section-header-wrapper__form-input._error::before {
+        position: absolute;
+        content: 'Заполните обязательные поля!';
+        font-size: 16px;
+        color: #cc3333;
+        top: 60%;
+        left: 5%; }
       .section-header-wrapper__form-input input {
         width: 313px;
         border: 1px solid #f4f4f4;
@@ -331,7 +341,8 @@ img {
         .section-header-wrapper__form-input input:focus {
           box-shadow: 0 0 15px #b9b9b9; }
         .section-header-wrapper__form-input input._error {
-          box-shadow: 0 0 10px #cc3333; }
+          box-shadow: 0 0 10px #cc3333;
+          margin-bottom: 40px; }
       .section-header-wrapper__form-checkbox {
         font-size: 12px; }
         .section-header-wrapper__form-checkbox._error label::before {

@@ -28,7 +28,8 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
         } else {
-            alert('Заполните обязательные поля');
+            
+            // alert('Заполните обязательные поля');
         }
     }
 
@@ -66,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
         input.classList.add('_error');
     }
     function formRemoveError(input) {
+
         input.parentElement.classList.remove('_error');
         input.classList.remove('_error');
     }
