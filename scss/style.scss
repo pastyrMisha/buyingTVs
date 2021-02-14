@@ -303,8 +303,21 @@ img {
                 opacity: 0;
                 visibility: hidden;
             }
+            
+
+            &._sending {
+                &::after {
+                    opacity: 1;
+                    visibility: visible;
+                    
+                }  
+            }
+
+            // === / _sending ===
+
+            // ===  _welldone ===
             &::before {
-                content: '';
+                content: 'Заявка отправлена!';
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -313,24 +326,15 @@ img {
                 background: rgba(239, 246, 245, 1) url('../img/anim-check.gif') center / 50px no-repeat;
                 opacity: 0;
                 visibility: hidden;
+                text-align: center;
+                line-height: 27;
             }
-
-            &._sending {
-                &::after {
-                    opacity: 1;
-                    visibility: visible;
-                }
-            }
-
-            // === / _sending ===
-
-            // ===  _welldone ===
 
             &._welldone {
                 &::before {
                     opacity: 1;
                     visibility: visible;
-                    
+                    z-index: 9;
                 }
             }
 
@@ -505,6 +509,24 @@ img {
     @media (max-width: $screen-lg-max) {
         &-wrapper {
             flex-wrap: wrap;
+            &__form {
+                // ===  _welldone ===
+            &::before {
+                content: 'Заявка отправлена!';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(239, 246, 245, 1) url('../img/anim-check.gif') center / 50px no-repeat;
+                opacity: 0;
+                visibility: hidden;
+                text-align: center;
+                line-height: 28;
+            }
+
+            // ===  / _welldone ===
+            }
         }
     }
 
@@ -615,9 +637,6 @@ img {
                         }
                     }
 
-
-
-
                     input {
                         width: 90%;
                     }
@@ -626,11 +645,27 @@ img {
         }
     }
 
+    @media (max-width: $screen-xs-max) {
+        &-wrapper {
+            &__form {
+                // ===  _welldone ===
+            &::before {
+                line-height: 29;
+            }
+            // ===  / _welldone ===
+            }
+        }
+    }
     @media (max-width: 360px) {
-
 
         &-wrapper {
             &__form {
+                // ===  _welldone ===
+            &::before {
+                line-height: 32;
+            }
+
+            // ===  / _welldone ===
                 &-input {
                     &._error {
                         &::before {
@@ -1277,6 +1312,29 @@ img {
 
             // === / _footsending ===
 
+            // ===  _welldone ===
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(239, 246, 245, 1) url('../img/anim-check.gif') center / 50px no-repeat;
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            &._welldone {
+                &::before {
+                    opacity: 1;
+                    visibility: visible;
+                    z-index: 9;
+                }
+            }
+
+            // ===  / _welldone ===
+
             &-input {
                 flex-grow: 1;
 
@@ -1774,6 +1832,7 @@ img {
 }
 
 .modal__popup {
+    z-index: 10;
     &:hover {
         animation: rota 4s infinite normal;
         -webkit-animation-iteration-count: 1;
@@ -1786,7 +1845,7 @@ img {
         background: url(https://codernote.ru/files/cross.png) no-repeat center center;
         background-size: 16px 16px;
         display: block;
-
+        
         &:focus {
             cursor: pointer;
         }
@@ -1825,6 +1884,30 @@ img {
     }
 
     // === / _modalsending ===
+// ===  _welldone ===
+&::before {
+    content: 'Заявка отправлена!';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(239, 246, 245, 1) url('../img/anim-check.gif') center / 50px no-repeat;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    line-height: 20;
+}
+
+&._welldone {
+    &::before {
+        opacity: 1;
+        visibility: visible;
+        z-index: 9;
+    }
+}
+
+// ===  / _welldone ===
 
     &-title {
         padding-left: 10px;

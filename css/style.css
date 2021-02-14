@@ -309,8 +309,11 @@ img {
         background: rgba(255, 255, 255, 0.9) url("../img/loading.gif") center/50px no-repeat;
         opacity: 0;
         visibility: hidden; }
+      .section-header-wrapper__form._sending::after {
+        opacity: 1;
+        visibility: visible; }
       .section-header-wrapper__form::before {
-        content: '';
+        content: 'Заявка отправлена!';
         position: absolute;
         top: 0;
         left: 0;
@@ -318,13 +321,13 @@ img {
         height: 100%;
         background: #eff6f5 url("../img/anim-check.gif") center/50px no-repeat;
         opacity: 0;
-        visibility: hidden; }
-      .section-header-wrapper__form._sending::after {
-        opacity: 1;
-        visibility: visible; }
+        visibility: hidden;
+        text-align: center;
+        line-height: 27; }
       .section-header-wrapper__form._welldone::before {
         opacity: 1;
-        visibility: visible; }
+        visibility: visible;
+        z-index: 9; }
       .section-header-wrapper__form-title {
         padding-left: 10px;
         text-align: center; }
@@ -424,7 +427,19 @@ img {
       margin-left: -22px; } }
   @media (max-width: 1199px) {
     .section-header-wrapper {
-      flex-wrap: wrap; } }
+      flex-wrap: wrap; }
+      .section-header-wrapper__form::before {
+        content: 'Заявка отправлена!';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #eff6f5 url("../img/anim-check.gif") center/50px no-repeat;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+        line-height: 28; } }
   @media (min-width: 768px) and (max-width: 1199px) {
     .section-header-wrapper__image {
       margin-left: 0px; }
@@ -486,7 +501,12 @@ img {
             left: 15%; }
           .section-header-wrapper__form-input input {
             width: 90%; } }
+  @media (max-width: 575px) {
+    .section-header-wrapper__form::before {
+      line-height: 29; } }
   @media (max-width: 360px) {
+    .section-header-wrapper__form::before {
+      line-height: 32; }
     .section-header-wrapper__form-input._error::before {
       font-size: 15px;
       top: 245px; } }
@@ -864,6 +884,20 @@ img {
       .section-footercall-wrapper__form._footsending::after {
         opacity: 1;
         visibility: visible; }
+      .section-footercall-wrapper__form::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #eff6f5 url("../img/anim-check.gif") center/50px no-repeat;
+        opacity: 0;
+        visibility: hidden; }
+      .section-footercall-wrapper__form._welldone::before {
+        opacity: 1;
+        visibility: visible;
+        z-index: 9; }
       .section-footercall-wrapper__form-input {
         flex-grow: 1; }
         .section-footercall-wrapper__form-input._error::before {
@@ -1189,20 +1223,21 @@ img {
   25% {
     transform: rotate(360deg); } }
 
-.modal__popup:hover {
-  -webkit-animation: rota 4s infinite normal;
-          animation: rota 4s infinite normal;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1; }
-
-.modal__popup i {
-  width: 30px;
-  height: 30px;
-  background: url(https://codernote.ru/files/cross.png) no-repeat center center;
-  background-size: 16px 16px;
-  display: block; }
-  .modal__popup i:focus {
-    cursor: pointer; }
+.modal__popup {
+  z-index: 10; }
+  .modal__popup:hover {
+    -webkit-animation: rota 4s infinite normal;
+            animation: rota 4s infinite normal;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1; }
+  .modal__popup i {
+    width: 30px;
+    height: 30px;
+    background: url(https://codernote.ru/files/cross.png) no-repeat center center;
+    background-size: 16px 16px;
+    display: block; }
+    .modal__popup i:focus {
+      cursor: pointer; }
 
 .modal__form {
   background: #fff;
@@ -1226,6 +1261,22 @@ img {
   .modal__form._modalsending::after {
     opacity: 1;
     visibility: visible; }
+  .modal__form::before {
+    content: 'Заявка отправлена!';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #eff6f5 url("../img/anim-check.gif") center/50px no-repeat;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    line-height: 20; }
+  .modal__form._welldone::before {
+    opacity: 1;
+    visibility: visible;
+    z-index: 9; }
   .modal__form-title {
     padding-left: 10px;
     font-size: 23px; }
