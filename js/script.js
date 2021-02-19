@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     form.reset();
                     form.classList.remove('_sending');
                     form.classList.add('_welldone');
-                    setTimeout(function(){
+                    setTimeout(function () {
                         form.classList.remove('_welldone');
                     }, 2000);
                 }
