@@ -209,13 +209,22 @@ img {
     padding-right: 20px;
     vertical-align: middle; }
   .section-preheader-content__tel {
-    font-weight: bold; }
-    .section-preheader-content__tel::before {
-      content: url("/img/tel.png");
-      padding-right: 20px;
-      vertical-align: middle; }
-    .section-preheader-content__tel a {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column; }
+    .section-preheader-content__tel a:first-child {
       text-decoration: none; }
+      .section-preheader-content__tel a:first-child::before {
+        content: url("/img/tel.png");
+        padding-right: 20px;
+        vertical-align: middle; }
+    .section-preheader-content__tel a:last-child {
+      text-decoration: none; }
+      .section-preheader-content__tel a:last-child::before {
+        content: url("/img/tel.png");
+        padding-right: 13px;
+        padding-left: 2px;
+        vertical-align: middle; }
 
 @media (max-width: 991px) {
   .section-preheader-content__logo a img {
@@ -231,10 +240,11 @@ img {
   .section-preheader {
     padding: 10px; }
     .section-preheader-content {
-      height: 90px;
+      height: 120px;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr; }
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-gap: 10px; }
       .section-preheader-content__logo {
         flex-basis: 100%;
         grid-row-start: 1;
@@ -270,10 +280,20 @@ img {
       padding-right: 5px; } }
 
 @media (max-width: 375px) {
-  .section-preheader-content__hour, .section-preheader-content__location, .section-preheader-content__tel {
-    padding-left: 20px; }
-    .section-preheader-content__hour::before, .section-preheader-content__location::before, .section-preheader-content__tel::before {
-      display: none; } }
+  .section-preheader-content {
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 0px; }
+    .section-preheader-content__logo {
+      margin: 0; }
+      .section-preheader-content__logo a {
+        margin: 0px; }
+        .section-preheader-content__logo a img {
+          width: 125px; }
+    .section-preheader-content__hour, .section-preheader-content__location, .section-preheader-content__tel {
+      padding-left: 5px; }
+    .section-preheader-content__tel a {
+      margin-top: 10px;
+      margin-bottom: 10px; } }
 
 .section-header {
   background: #f4f4f4; }

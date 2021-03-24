@@ -122,15 +122,26 @@ img {
 
         &__tel {
             font-weight: bold;
+            display: flex;
+            flex-direction: column;
 
+            a:first-child {
+                text-decoration: none;
+                
             &::before {
                 content: url('/img/tel.png');
                 padding-right: 20px;
                 vertical-align: middle;
             }
-
-            a {
+            }
+            a:last-child {
                 text-decoration: none;
+                &::before {
+                    content: url('/img/tel.png');
+                    padding-right: 13px;
+                    padding-left: 2px;
+                    vertical-align: middle;
+                }
             }
         }
     }
@@ -161,10 +172,11 @@ img {
         padding: 10px;
 
         &-content {
-            height: 90px;
+            height: 120px;
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr 1fr;
+            grid-gap: 10px;
 
             &__logo {
                 flex-basis: 100%;
@@ -234,14 +246,26 @@ img {
 
     @media (max-width: $screen-xs) {
         &-content {
-
+            grid-template-columns: 1fr 2fr;
+            grid-gap: 0px;
+            &__logo {
+                margin: 0;
+                a {
+                    margin: 0px;
+                    img {
+                        width: 125px;
+                    }
+                }
+            }
             &__hour,
             &__location,
             &__tel {
-                padding-left: 20px;
-
-                &::before {
-                    display: none;
+                padding-left: 5px;
+            }
+            &__tel {
+                a {
+                    margin-top: 10px;
+                    margin-bottom: 10px;
                 }
             }
         }
