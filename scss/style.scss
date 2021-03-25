@@ -136,8 +136,10 @@ img {
             a:last-child {
                 text-decoration: none;
                 &::before {
-                    content: url('/img/tel.png');
-                    padding-right: 13px;
+                    content: url('/img/whatsapp.png');
+                    width: 27px;
+                    height: 27px;
+                    padding-right: 7px;
                     padding-left: 2px;
                     vertical-align: middle;
                 }
